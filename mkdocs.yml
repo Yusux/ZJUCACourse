@@ -1,5 +1,5 @@
 site_name: 浙江大学23年计算机体系结构实验
-site_url: http://zju-arch.pages.zjusct.io/arch-fa23
+site_url: https://zju-arch.pages.zjusct.io/arch-fa23
 site_dir: public # 设置 site_dir 配合 gitlab CI
 repo_url: https://git.zju.edu.cn/zju-arch/arch-fa23
 repo_name: zju-arch/arch-fa23

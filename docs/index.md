@@ -9,7 +9,7 @@
 └── src/        # 公开代码
 ```
 
-实验文档已经部署在了[zju-git pages](http://zju-arch.pages.zjusct.io/arch-fa23)上，方便大家阅读。
+实验文档已经部署在了[zju-git pages](https://zju-arch.pages.zjusct.io/arch-fa23)上，方便大家阅读。
 
 
 ## 本地渲染文档

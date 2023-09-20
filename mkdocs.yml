@@ -21,6 +21,7 @@ theme:
         name: Switch to light mode
 nav: 
   - 实验指导一: lab1.md
+  - NEXYS_A7数码管调试说明: NEXYS_A7数码管调试说明.md
   - 常见问题及解答: faq.md
 markdown_extensions:
   - attr_list

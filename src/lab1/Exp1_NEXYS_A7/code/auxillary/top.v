@@ -9,10 +9,9 @@ module top (
     input wire CLK100MHZ,
     input wire [15:0] SW,
     input wire RSTN,
-    
     input wire BTN_C,
     input wire BTN_R,
-    
+
     output wire CA,    
     output wire CB,
     output wire CC,
@@ -33,7 +32,7 @@ module top (
     // clock generator
     wire clk_cpu, clk_disp;
     wire locked;
-    wire clk100MHz;
+    wire clk100MHz, led_clk;
 
     wire [7:0] seg_ca;
     assign {DP,CG,CF,CE,CD,CC,CB,CA} = seg_ca;
@@ -43,7 +42,8 @@ module top (
         .CLK_OUT1(clk100MHz), //100MHz
         .CLK_OUT2(),          //50MHz
         .CLK_OUT3(clk_disp),  //25MHz
-        .CLK_OUT4(clk_cpu)    //10MHz
+        .CLK_OUT4(clk_cpu),   //10MHz
+        .CLK_OUT5(led_clk)
         );
 
     wire [1:0] btn;  //{btn_c, btn_r}
@@ -55,7 +55,7 @@ module top (
         ) BTN_SCAN (
         .clk(clk_disp),
         .rst(1'b0),
-        .btn_c(BTN_C),
+        .btn_c(BTN_C), // TODO
         .btn_r(BTN_R),
         .result(btn)
         );
@@ -75,13 +75,16 @@ module top (
 
     wire [31:0] disp_data;
     wire [15:0] led_array;
-    assign led_array = ~{btn_interrupt, btn_step, 6'b0, SW[7:0]};
+    assign led_array = {btn_interrupt, btn_step, 6'b0, SW[7:0]};
     assign LED = led_array;
-    
-    
     
     wire [6:0] debug_addr;
     wire [31:0] debug_data;
+
+    // 0 - debug_en
+    // 1~5 - debug_addr
+    // 6 - debug_sel (see Test_signal in CPUTEST.v)
+    assign debug_addr = SW[7:1];
     
     RV32core core(
         .debug_en(SW[0]),
@@ -93,11 +96,12 @@ module top (
         .interrupter(SW[12])
         );
 
+    // not used in lab1
     display DISPLAY (
-        .clk(clk_disp),
+        .clk(led_clk),
         .rst(rst_all),
         .en(8'b11111111),
-        .data(32'h0),
+        .data(debug_data),
         .dot(8'b00000000),
         .led(led_array),
         .led_clk(),
@@ -110,7 +114,7 @@ module top (
        
     VGA_TESTP  vga(.clk(clk100MHz),
                     .clk25(clk_disp),
-                    .Debug_addr(debug_addr),
+                    .Debug_addr(),
                     .Debug_data(debug_data),
                     .MEM_Addr(0),
                     .MEM_Data(0),

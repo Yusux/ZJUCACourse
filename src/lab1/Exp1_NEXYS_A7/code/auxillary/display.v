@@ -116,7 +116,22 @@ module display (
         .s_dat(led_do)
         );
     
-    
+    // parallel2serial #(
+    //     .P_CLK_FREQ(CLK_FREQ),
+    //     .S_CLK_FREQ(20),
+    //     .DATA_BITS(64),
+    //     .CODE_ENDIAN(1)
+    //     ) P2S_SEG (
+    //     .clk(clk),
+    //     .rst(rst),
+    //     .data(SEG_PULSE ? segment : ~segment),
+    //     .start(seg_start),
+    //     .busy(),
+    //     .finish(),
+    //     .s_clk(seg_clk),
+    //     .s_clr(seg_clr),
+    //     .s_dat(seg_do)
+    //     );
     
     always @(posedge clk) begin
         if (rst)

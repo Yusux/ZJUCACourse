@@ -77,7 +77,8 @@ module my_clk_gen
   output        CLK_OUT1,
   output        CLK_OUT2,
   output        CLK_OUT3,
-  output        CLK_OUT4
+  output        CLK_OUT4,
+  output        CLK_OUT5 // for LED
  );
 
 
@@ -194,6 +195,15 @@ module my_clk_gen
    (.O   (CLK_OUT4),
     .I   (clkout3));
 
-
-
+  reg [31:0] led_counter = 0;
+  reg led_clk = 0;
+  assign CLK_OUT5 = led_clk;
+  always @ (posedge clkin1) begin
+    if (led_counter == 32'd40000) begin
+      led_counter <= 0;
+      led_clk <= ~led_clk;
+    end else begin
+      led_counter <= led_counter + 1;
+    end
+  end
 endmodule

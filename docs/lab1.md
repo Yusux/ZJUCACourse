@@ -22,8 +22,7 @@ DDL：2023.10.19 23:59
 
 -   **IDE**：Vivado
 
--   **开发板**：NEXYS A7 (XC7A100T-1CSG324C) 或 Sword 4.0
-    (XC7K325T-2FFG676)
+-   **开发板**：NEXYS A7（XC7A100TCSG324）或 Sword 4.0（XC7K325TFFG676）
 
 ## 实验原理
 

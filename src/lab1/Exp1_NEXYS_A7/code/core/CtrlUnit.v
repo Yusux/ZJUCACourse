@@ -76,7 +76,7 @@ module CtrlUnit(
     wire AUIPC = opcode == 7'b0010111;                          //to fill sth. in 
 
     wire JAL  = opcode == 7'b1101111;                           //to fill sth. in 
-    assign JALR = JAL & funct3_0;                        //to fill sth. in 
+    assign JALR = (opcode == 7'b1100111) & funct3_0;                        //to fill sth. in 
 
     wire R_valid = AND | OR | ADD | XOR | SLL | SRL | SRA | SUB | SLT | SLTU;
     wire I_valid = ANDI | ORI | ADDI | XORI | SLLI | SRLI | SRAI | SLTI | SLTIU;
@@ -85,7 +85,7 @@ module CtrlUnit(
     wire S_valid = SW | SH | SB;
 
 
-    assign Branch = (B_valid & cmp_res) | JAL;                       //to fill sth. in 
+    assign Branch = (B_valid & cmp_res) | JAL | JALR;                       //to fill sth. in 
 
     parameter Imm_type_I = 3'b001;
     parameter Imm_type_B = 3'b010;
@@ -112,7 +112,7 @@ module CtrlUnit(
                       {3{BGE}} & cmp_GE  |
                       {3{BGEU}}& cmp_GEU ;                         //to fill sth. in
 
-    assign ALUSrc_A = AUIPC | JAL;                         //to fill sth. in 
+    assign ALUSrc_A = AUIPC | JAL | JALR;                         //to fill sth. in 
 
     assign ALUSrc_B = I_valid | L_valid | S_valid | LUI | AUIPC;                         //to fill sth. in 
 
@@ -138,7 +138,7 @@ module CtrlUnit(
                         {4{SLT | SLTI}}                             & ALU_SLT  |
                         {4{SLTU | SLTIU}}                           & ALU_SLTU |
                         {4{SRA | SRAI}}                             & ALU_SRA  |
-                        {4{JAL}}                                    & ALU_Ap4  |
+                        {4{JAL | JALR}}                                    & ALU_Ap4  |
                         {4{LUI}}                                    & ALU_Bout ;
 
     assign DatatoReg = L_valid;
@@ -156,7 +156,7 @@ module CtrlUnit(
     parameter hazard_optype_ALU = 2'd1;
     parameter hazard_optype_LOAD = 2'd2;
     parameter hazard_optype_STORE = 2'd3;
-    assign hazard_optype = {2{R_valid | I_valid | JAL | LUI | AUIPC}} & hazard_optype_ALU  |
+    assign hazard_optype = {2{R_valid | I_valid | JAL | JALR | LUI | AUIPC}} & hazard_optype_ALU  |
                            {2{L_valid}}                               & hazard_optype_LOAD |
                            {2{S_valid}}                               & hazard_optype_STORE;                  //to fill sth. in 
 

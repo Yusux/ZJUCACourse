@@ -121,7 +121,7 @@ module  RV32core(
     ALU alu(.A(ALUA_EXE),.B(ALUB_EXE),.Control(ALUControl_EXE),
         .res(ALUout_EXE),.zero(ALUzero_EXE),.overflow(ALUoverflow_EXE));
     
-   MUX2T1_32 mux_forward_EXE(.I0(rs2_data_EXE),.I1(Dataout_MEM),.s(forward_ctrl_ls),.o(Dataout_EXE));        //to fill sth. in ()
+   MUX2T1_32 mux_forward_EXE(.I0(rs2_data_EXE),.I1(Datain_MEM),.s(forward_ctrl_ls),.o(Dataout_EXE));        //to fill sth. in ()
 
 
     // MEM

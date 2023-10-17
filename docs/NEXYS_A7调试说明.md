@@ -26,6 +26,9 @@
 ## UART 
 NEXYS A7 提供了 USB-UART 的桥接，这使得我们可以直接通过烧写bitstream的数据线让开发板和电脑通信。
 ### 修改工程
+
+从lab2开始可以省略这一步。
+
 git pull 之后，你会发现 src/lab1 目录下多了 uart/。
 
 请将其中的 `top.v` 替换原工程的 `code\auxillary\top.v`；将 `UART_TX_CTRL.vhd`、`uart_buffer.v`、`debug_ctrl.v`复制到你的工程的`code\auxillary\`下， `Add Sources`，将新的 `verilog` 模块加入到你的工程。需要指出，现在我们不需要 `VGA` 了，所以这部分可以去掉，节省从 `synthesis` 到上板子的时间:wink:。
@@ -87,8 +90,8 @@ set_property -dict { PACKAGE_PIN D4    IOSTANDARD LVCMOS33 } [get_ports { UART_T
   - 将 SW0 切至高电平，进入单步调试模式
   - 将 SW8 切至高电平，使用 UART 调试
   - 点按BTNR（M17），触发调试时钟，CPU运作单个周期，MobaXterm 的窗口上会打印31个通用寄存器（X1-X31）的值，WB 阶段的 PC 和指令，以及 MEM 阶段的访存地址和 RAM 的数据输出。
-  ![DEBUG_WINDOW](img/uart_display.png)
+    ![DEBUG_WINDOW](img/uart_display.png)
 #### 定制化输出信号值
-  
+
   其实这和 VGA 显示有点类似，都是由相应的模块（计组的VGATEST，现在的 DEBUG_CTRL）采样 CPU 的信号（一个间隔取一个信号值），然后综合显示。 
   如果想要输出更多信号值（见 `code\auxillary\CPUTEST.v`），可以查看并修改 `debug_ctrl.v`。

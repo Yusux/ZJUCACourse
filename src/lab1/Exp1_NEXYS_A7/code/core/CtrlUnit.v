@@ -138,7 +138,7 @@ module CtrlUnit(
                         {4{SLT | SLTI}}                             & ALU_SLT  |
                         {4{SLTU | SLTIU}}                           & ALU_SLTU |
                         {4{SRA | SRAI}}                             & ALU_SRA  |
-                        {4{JAL | JALR}}                                    & ALU_Ap4  |
+                        {4{JAL | JALR}}                             & ALU_Ap4  |
                         {4{LUI}}                                    & ALU_Bout ;
 
     assign DatatoReg = L_valid;
@@ -153,11 +153,11 @@ module CtrlUnit(
 
     assign rs2use = R_valid | B_valid;                         //to fill sth. in 
 
-    parameter hazard_optype_ALU = 2'd1;
-    parameter hazard_optype_LOAD = 2'd2;
-    parameter hazard_optype_STORE = 2'd3;
+    parameter hazard_optype_ALU = 2'b01;
+    parameter hazard_optype_LOAD = 2'b10;
+    parameter hazard_optype_STORE = 2'b11;
     assign hazard_optype = {2{R_valid | I_valid | JAL | JALR | LUI | AUIPC}} & hazard_optype_ALU  |
-                           {2{L_valid}}                               & hazard_optype_LOAD |
-                           {2{S_valid}}                               & hazard_optype_STORE;                  //to fill sth. in 
+                           {2{L_valid}}                                      & hazard_optype_LOAD |
+                           {2{S_valid}}                                      & hazard_optype_STORE;                  //to fill sth. in 
 
 endmodule

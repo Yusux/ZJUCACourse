@@ -10,9 +10,9 @@ module HazardDetectionUnit(
     output forward_ctrl_ls,
     output[1:0] forward_ctrl_A, forward_ctrl_B
 );
-    parameter hazard_optype_ALU = 2'd1;
-    parameter hazard_optype_LOAD = 2'd2;
-    parameter hazard_optype_STORE = 2'd3;
+    parameter hazard_optype_ALU = 2'b01;
+    parameter hazard_optype_LOAD = 2'b10;
+    parameter hazard_optype_STORE = 2'b11;
 
     reg[1:0] hazard_optype_EXE, hazard_optype_MEM;
 

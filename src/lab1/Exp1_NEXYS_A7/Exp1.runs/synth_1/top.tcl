@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/Exp1.runs/synth_1/top.tcl"
+  variable script "C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/Exp1.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -76,45 +76,44 @@ create_project -in_memory -part xc7a100tcsg324-2L
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/Exp1.cache/wt [current_project]
-set_property parent.project_path C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/Exp1.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/Exp1.cache/wt [current_project]
+set_property parent.project_path C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/Exp1.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/Exp1.cache/ip [current_project]
+set_property ip_output_repo c:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/Exp1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/function.vh
+read_verilog C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/function.vh
 read_verilog -library xil_defaultlib {
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/ALU.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/CPUTEST.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/Code2Inst.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/CtrlUnit.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/Font816.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/HazardDetectionUnit.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/ImmGen.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/common/MUX2T1_32.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/common/MUX4T1_32.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/RAM_B.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/common/REG32.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/REG_EX_MEM.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/REG_ID_EX.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/REG_IF_ID.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/REG_MEM_WB.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/ROM_D.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/RV32core.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/Regs.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/VGATEST.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/common/add_32.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/btn_scan.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/common/cmp_32.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/debug_clk.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/display.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/my_clk_gen.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/parallel2serial.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/vga.v
-  C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/top.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/ALU.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/CPUTEST.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/CtrlUnit.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/HazardDetectionUnit.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/ImmGen.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/common/MUX2T1_32.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/common/MUX4T1_32.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/RAM_B.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/common/REG32.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/REG_EX_MEM.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/REG_ID_EX.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/REG_IF_ID.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/REG_MEM_WB.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/ROM_D.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/RV32core.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/core/Regs.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/common/add_32.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/btn_scan.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/common/cmp_32.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/debug_clk.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/debug_ctrl.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/display.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/my_clk_gen.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/parallel2serial.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/uart_buffer.v
+  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/top.v
 }
+read_vhdl -library xil_defaultlib C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/auxillary/UART_TX_CTRL.vhd
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -124,8 +123,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/constraint.xdc
-set_property used_in_implementation false [get_files C:/Users/flyme/Documents/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/constraint.xdc]
+read_xdc C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/constraint.xdc
+set_property used_in_implementation false [get_files C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab1/Exp1_NEXYS_A7/code/constraint.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

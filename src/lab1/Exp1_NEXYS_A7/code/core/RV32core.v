@@ -8,6 +8,13 @@ module  RV32core(
         output[31:0] debug_data,  // debug data
         input clk,  // main clock
         input rst,  // synchronous reset
+
+        // output for uart debug
+        output[31:0] wb_pc,
+        output[31:0] wb_inst,
+        output[31:0] mem_addr,
+        output[31:0] mem_data,
+
         input interrupter  // interrupt source, for future use
     );
 
@@ -49,6 +56,10 @@ module  RV32core(
     wire[4:0] rd_WB;
     wire [31:0] wt_data_WB, PC_WB, inst_WB, ALUout_WB, Datain_WB;
 
+    assign wb_inst = inst_WB;
+    assign wb_pc = PC_WB;
+    assign mem_addr = MIO_MEM ? ALUout_MEM : 32'hFFFFFFFF ;
+    assign mem_data = MIO_MEM ? Datain_MEM : 32'hAA55AA55 ;
 
     // IF
     REG32 REG_PC(.clk(debug_clk),.rst(rst),.CE(PC_EN_IF),.D(next_PC_IF),.Q(PC_IF));
@@ -114,14 +125,14 @@ module  RV32core(
         .DatatoReg_EX(DatatoReg_EXE),.RegWrite_EX(RegWrite_EXE),.WR_EX(mem_w_EXE),
         .u_b_h_w_EX(u_b_h_w_EXE),.MIO_EX(MIO_EXE));
     
-    MUX2T1_32 mux_A_EXE(.I0(rs1_data_EXE),.I1(PC_EXE),.s(ALUSrc_A_EXE),.o(ALUA_EXE));     //to fill sth. in ()
+    MUX2T1_32 mux_A_EXE(.I0(rs1_data_EXE),.I1(PC_EXE),.s(ALUSrc_A_EXE),.o(ALUA_EXE));       //to fill sth. in ()
 
-    MUX2T1_32 mux_B_EXE(.I0(rs2_data_EXE),.I1(Imm_EXE),.s(ALUSrc_B_EXE),.o(ALUB_EXE));       //to fill sth. in ()
+    MUX2T1_32 mux_B_EXE(.I0(rs2_data_EXE),.I1(Imm_EXE),.s(ALUSrc_B_EXE),.o(ALUB_EXE));      //to fill sth. in ()
 
     ALU alu(.A(ALUA_EXE),.B(ALUB_EXE),.Control(ALUControl_EXE),
         .res(ALUout_EXE),.zero(ALUzero_EXE),.overflow(ALUoverflow_EXE));
     
-   MUX2T1_32 mux_forward_EXE(.I0(rs2_data_EXE),.I1(Datain_MEM),.s(forward_ctrl_ls),.o(Dataout_EXE));        //to fill sth. in ()
+    MUX2T1_32 mux_forward_EXE(.I0(rs2_data_EXE),.I1(Datain_MEM),.s(forward_ctrl_ls),.o(Dataout_EXE));   //to fill sth. in ()
 
 
     // MEM

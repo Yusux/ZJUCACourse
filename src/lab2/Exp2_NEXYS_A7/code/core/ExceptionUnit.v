@@ -25,7 +25,8 @@ module ExceptionUnit(
     output redirect_mux,
 
     output reg_FD_flush, reg_DE_flush, reg_EM_flush, reg_MW_flush, 
-    output RegWrite_cancel
+    output RegWrite_cancel,
+    output MemWrite_cancel
 );
     // According to the diagram, design the Exception Unit
     // You can modify any code in this file if needed!

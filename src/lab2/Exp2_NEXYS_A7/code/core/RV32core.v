@@ -47,7 +47,7 @@ module  RV32core(
         ALUA_EXE, ALUB_EXE, Dataout_EXE;
 
     wire redirect_mux_exp, reg_FD_flush_exp, reg_DE_flush_exp,
-        reg_EM_flush_exp, reg_MW_flush_exp, RegWrite_cancel_exp;
+        reg_EM_flush_exp, reg_MW_flush_exp, RegWrite_cancel_exp, MemWrite_cancel_exp;
     wire[31:0] PC_redirect_exp;
     
     wire isFlushed_MEM, RegWrite_MEM, DatatoReg_MEM, mem_w_MEM, mem_r_MEM,
@@ -161,7 +161,7 @@ module  RV32core(
         .mret_MEM(mret_MEM),.exp_vector_MEM(exp_vector_MEM));
     
     RAM_B data_ram(.addra(ALUout_MEM),.clka(debug_clk),.dina(Dataout_MEM), 
-        .wea(mem_w_MEM),.rea(mem_r_MEM),.douta(RAMout_MEM),.mem_u_b_h_w(u_b_h_w_MEM),
+        .wea(mem_w_MEM & ~MemWrite_cancel_exp),.rea(mem_r_MEM),.douta(RAMout_MEM),.mem_u_b_h_w(u_b_h_w_MEM),
         .l_access_fault(l_access_fault_MEM),.s_access_fault(s_access_fault_MEM));
 
     ExceptionUnit exp_unit(.clk(debug_clk),.rst(rst),.csr_rw_in(csr_rw_MEM),.csr_wsc_mode_in(inst_MEM[13:12]),
@@ -182,7 +182,7 @@ module  RV32core(
         .PC_redirect(PC_redirect_exp),.redirect_mux(redirect_mux_exp),
         .reg_FD_flush(reg_FD_flush_exp),.reg_DE_flush(reg_DE_flush_exp),
         .reg_EM_flush(reg_EM_flush_exp),.reg_MW_flush(reg_MW_flush_exp),
-        .RegWrite_cancel(RegWrite_cancel_exp));
+        .RegWrite_cancel(RegWrite_cancel_exp),.MemWrite_cancel(MemWrite_cancel_exp));
     
     MUX2T1_32 mux_csrout(.I0(RAMout_MEM),.I1(CSRout_MEM),.s(csr_rw_MEM),.o(Datain_MEM));
         

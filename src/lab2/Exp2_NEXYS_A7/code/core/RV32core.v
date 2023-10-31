@@ -179,6 +179,8 @@ module  RV32core(
         .epc_cur(PC_WB),
         .epc_next(~isFlushed_MEM ? PC_MEM : ~isFlushed_EXE ? PC_EXE :
         ~isFlushed_ID ? PC_ID : PC_IF),
+        .inst_cur(inst_WB),
+        .mem_addr_cur(ALUout_WB),
         .PC_redirect(PC_redirect_exp),.redirect_mux(redirect_mux_exp),
         .reg_FD_flush(reg_FD_flush_exp),.reg_DE_flush(reg_DE_flush_exp),
         .reg_EM_flush(reg_EM_flush_exp),.reg_MW_flush(reg_MW_flush_exp),

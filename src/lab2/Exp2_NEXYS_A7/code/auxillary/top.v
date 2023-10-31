@@ -103,6 +103,8 @@ module top (
     wire [4:0] uart_debug_reg;
     wire [31:0] wb_pc;
     wire [31:0] wb_inst;
+    wire [31:0] mem_addr;
+    wire [31:0] mem_data;
 
     wire uart_busy;
 

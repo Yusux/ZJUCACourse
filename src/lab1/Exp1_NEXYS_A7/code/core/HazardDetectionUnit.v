@@ -46,12 +46,14 @@ module HazardDetectionUnit(
                          rs2_ID == rd_MEM                      &&
                          hazard_optype_MEM == hazard_optype_LOAD;
     
-    assign forward_ctrl_A = {2{rs1_forward_1}} & 2'b01|
-                            {2{rs1_forward_2}} & 2'b10|
-                            {2{rs1_forward_3}} & 2'b11;
-    assign forward_ctrl_B = {2{rs2_forward_1}} & 2'b01|
-                            {2{rs2_forward_2}} & 2'b10|
-                            {2{rs2_forward_3}} & 2'b11;
+    assign forward_ctrl_A = rs1_forward_1 ?  2'd1
+                          : rs1_forward_2 ?  2'd2
+                          : rs1_forward_3 ?  2'd3
+                          : 2'b0 ;
+    assign forward_ctrl_B = rs2_forward_1 ?  2'd1
+                          : rs2_forward_2 ?  2'd2
+                          : rs2_forward_3 ?  2'd3
+                          : 2'b0 ;
     
     assign forward_ctrl_ls = rs2_EXE                                 &&
                              rs2_EXE == rd_MEM                       &&

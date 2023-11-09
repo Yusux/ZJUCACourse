@@ -22,6 +22,7 @@ theme:
 nav: 
   - 实验指导一: lab1.md
   - 实验指导二: lab2.md
+  - 实验指导三: lab3.md
   - NEXYS_A7 调试说明: NEXYS_A7调试说明.md
   - 常见问题及解答: faq.md
 markdown_extensions:

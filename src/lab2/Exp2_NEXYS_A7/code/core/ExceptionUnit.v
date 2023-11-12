@@ -49,7 +49,7 @@ module ExceptionUnit(
     assign csr_r_data_out = csr_rdata;
     assign csr_wdata = csr_w_imm_mux ? {27'b0, csr_w_data_imm} : csr_w_data_reg;
 
-    assign trap = interrupt | illegal_inst | l_access_fault | s_access_fault | ecall_m;
+    assign trap = (interrupt & mstatus[3]) | illegal_inst | l_access_fault | s_access_fault | ecall_m;
     assign is_flush = trap | mret;
 
     assign mret_pc = mcause[31] ? mepc-4 : mepc;

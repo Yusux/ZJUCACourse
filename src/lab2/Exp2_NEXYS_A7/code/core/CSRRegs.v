@@ -45,7 +45,7 @@ module CSRRegs(
     wire[31:0] mcause_next;
     wire[31:0] mtval_next;
 
-    assign trap = interrupt | illegal_inst | l_access_fault | s_access_fault | ecall_m;
+    assign trap = (interrupt & mstatus[3]) | illegal_inst | l_access_fault | s_access_fault | ecall_m;
 
     // mstatus  0x300 0000 0
     // mtvec    0x305 0101 5
@@ -61,7 +61,7 @@ module CSRRegs(
     assign rdata = CSR[raddr_map];
 
     assign mstatus_next = mret ? {19'b0, 2'b11, 3'b0, 1'b1, 3'b0, mstatus[7], 3'b0}
-                        : {19'b0, privilege_level, 3'b0, mstatus[3], 3'b0, mstatus[3], 3'b0};
+                        : {19'b0, privilege_level, 3'b0, mstatus[3], 3'b0, 1'b0, 3'b0};
     assign mepc_next = interrupt ? epc_next
                      : epc_cur;
     assign mcause_next = interrupt ? 32'h8000000B
@@ -102,6 +102,7 @@ module CSRRegs(
             privilege_level <= 2'b11;           // set privilege level to machine mode
         end
         else if (mret) begin
+            CSR[0] <= mstatus_next;
             privilege_level <= mstatus[12:11];  // restore privilege level
         end
         else if (csr_w) begin

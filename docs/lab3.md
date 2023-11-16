@@ -84,21 +84,86 @@ table，如图3所示。可以看到，表的左边记录的是访问过的分�
 
 2.  测试程序的源码见 lab3_ref/src/sort.c，请阅读以明确程序的输出内容，反汇编代码见 lab3_ref/obj。
 
-3.  本次实验的测试程序是一个**排序算法**，所以运算量非常大，单步调试较为繁琐。验收只会检查**排序结果**和靠前的若干条跳转指令：本次实验对串口显示作出了修改，当 SW[13] 拨上的时候，会传输测试程序打印的结果，即原数组和排序后的数组，验收的时候不需要开单步调试，一次性打印完；当 SW[13] 关上的时候，和之前一致，显示寄存器的值，验收会看若干跳转指令的预测情况。
+3.  本次实验的测试程序是一个**排序算法**，所以运算量非常大，单步调试较为繁琐。验收只会检查**排序结果**和若干条跳转指令：首先我们会看你的仿真跑到 loop 需要的时间相较不加分支预测是否有明显减少，然后直接在仿真图上检查若干跳转指令的预测情况；本次实验对串口显示作出了修改，当 SW[13] 拨上的时候，会传输测试程序打印的结果，即原数组和排序后的数组，上板不需要开单步调试，一次性打印完即可。
 ![上板结果](img/3_nexys_result.png){.center}
     
     如果你发现你的结果不正确请不要慌张，可以试试下面的几个方法：
 
-    -   首先请确保仿真的结果正确，仿真时会在 Tcl Console 显示程序的输出。因为测试比较复杂，需要多跑一段时间才能得到结果（可以设置为 50 微秒）。测试程序结束后会进入一个空循环。
+    -   首先请确保仿真的结果正确，仿真时会在 Tcl Console 显示程序的输出。因为测试比较复杂，需要多跑一段时间才能得到结果（可以设置为 50 微秒）。main 函数结束后会回到 _trm_init，进入一个空循环。如果你的仿真的 Tcl 输出打印了 error，说明排序错误。在 sort.c 中，一轮排序完，会调用 check 函数， 检查排序结果是否符合预期，如果相悖，就会打印 error，然后跳到 halt，在那里 loop。
+    ```C
+    for(i = 0; i < N; i++) {
+		check(a[i] == i);
+	}
+
+    80000010 <check>:
+    80000010:	00050463          	beq	a0,zero,80000018 <check+0x8>
+    80000014:	00008067          	jalr	zero,0(ra)
+    80000018:	80000537          	lui	a0,0x80000
+    8000001c:	ff010113          	addi	sp,sp,-16
+    80000020:	40050513          	addi	a0,a0,1024 # 80000400 <_end+0xffff7400>
+    80000024:	00112623          	sw	ra,12(sp)
+    80000028:	1f8000ef          	jal	ra,80000220 <puts>
+    8000002c:	00100513          	addi	a0,zero,1
+    80000030:	1d4000ef          	jal	ra,80000204 <halt>
+    ```
 
     ![仿真结果](img/3_sim_result.png){.center}
 
     -   可以先用前两次实验的测试程序检测你的实现，看基本功能是否正确。
 
     -   你可以在测试程序源文件看到，测试程序通过 puti/puts 两个函数输出数组的元素。通过反汇编代码 ref/obj/sort-riscv32-cpu.txt 可以看到，这两个函数实际上会把要输出的字符写⼊地址 0x10000000。在 ram.v 中，会对写入地址进行判定，如果是 0x10000000，就会拉高 sim_uart_char_valid，并且将要写入的字符给 sim_uart_char_out，所以你可以在仿真中观测这些信号，或许有帮助。
+    -   本次实验的测试指令序列非常长，出现 bug 以后较难定位从什么地方开始出错。你可以使用下述方式来快速定位出现问题的 PC。加分支预测和不加相比，就是在预测成功的时候，可以少掉 flush 一个周期的时间开销。将 is_flushed 的 cycle 去掉，两者的 PC 变化应当是一致的。
+    ```verilog
+    `timescale 1ns / 1ps
+
+    module core_sim;
+    reg clk, rst;
+    wire [31:0] debug_WB_PC;
+    // save pc at wb
+    reg [31:0] wb_pc; 
+
+    RV32core core(
+        .debug_en(1'b0),
+        .debug_step(1'b0),
+        .debug_addr(7'b0),
+        .debug_data(),
+        .clk(clk),
+        .rst(rst),
+        .interrupter(1'b0),
+        .wb_pc(debug_WB_PC) //add output here
+    );
+    
+    integer traceout;
+    initial begin
+        // open trace file
+        traceout = $fopen("trace.out");
+        clk = 0;
+        rst = 1;
+        wb_pc = 0;
+        #2 rst = 0;
+    end
+
+    always #1 clk = ~clk;
+    
+    always@(clk)begin
+        if(wb_pc != debug_WB_PC)begin
+            // output signal values to file
+            $fdisplay(traceout, " WB_PC=0x%8h",debug_WB_PC );
+            wb_pc <= debug_WB_PC;
+        end
+    end
+    endmodule
+    ```
+    修改你的仿真代码，于是在仿真的时候，会记录 wb_pc 的值（连续相同的 wb_pc 只会保留一份），写到 .\Exp3_NEXYS_A7\Exp2.sim\sim_1\behav\xsim 目录下的 trace.out 文件。
+    你可以先用不加分支预测的版本跑一遍仿真，得到一个 trace，再跑你的加了分支预测的版本，得到一个 trace，然后打开 vscode，对比两者的差异。
+    ![trace1](img/3_trace1.png){.center}
+    ![trace2](img/3_trace2.png){.center}
+
+
+
 
 # 思考题  
-1.  加了分支预测后，跑测试程序，较没加的时候快了多少？
+1.  加了分支预测后，仿真跑测试程序，较没加的时候快了多少？
 
 2.  在正确实现BTB和BHT的情况下，有没有可能会出现 BHT 预测分支发生跳转，也就是 branch
     taken，但是 BTB 中查不到目标跳转地址，为什么？

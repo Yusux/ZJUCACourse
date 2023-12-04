@@ -1,13 +1,14 @@
 #-----------------------------------------------------------
-# Vivado v2020.2 (64-bit)
-# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
-# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Nov  8 19:27:59 2023
-# Process ID: 12056
-# Current directory: E:/TA/MY/Exp3_NEXYS_A7/Exp2.runs/synth_1
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Dec  4 22:03:52 2023
+# Process ID: 27852
+# Current directory: C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/Exp3.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: E:/TA/MY/Exp3_NEXYS_A7/Exp2.runs/synth_1/top.vds
-# Journal file: E:/TA/MY/Exp3_NEXYS_A7/Exp2.runs/synth_1\vivado.jou
+# Log file: C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/Exp3.runs/synth_1/top.vds
+# Journal file: C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/Exp3.runs/synth_1\vivado.jou
+# Running On: YusuxYT, OS: Windows, CPU Frequency: 5190 MHz, CPU Physical cores: 12, Host memory: 34081 MB
 #-----------------------------------------------------------
 source top.tcl -notrace
 Command: synth_design -top top -part xc7a100tcsg324-1
@@ -17,20 +18,28 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 8504
-WARNING: [Synth 8-6901] identifier 'DATA_BITS' is used before its declaration [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/parallel2serial.v:10]
+INFO: [Synth 8-7075] Helper process launched with PID 29888
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'Addr', assumed default net type 'wire' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RV32core.v:261]
+INFO: [Synth 8-11241] undeclared symbol 'MWR', assumed default net type 'wire' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RV32core.v:262]
+INFO: [Synth 8-11241] undeclared symbol 'seg_en', assumed default net type 'wire' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/display.v:99]
+INFO: [Synth 8-11241] undeclared symbol 'seg_clr_n', assumed default net type 'wire' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/display.v:100]
+INFO: [Synth 8-11241] undeclared symbol 'clkout0', assumed default net type 'wire' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/my_clk_gen.v:138]
+INFO: [Synth 8-11241] undeclared symbol 'clkout1', assumed default net type 'wire' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/my_clk_gen.v:140]
+INFO: [Synth 8-11241] undeclared symbol 'clkout2', assumed default net type 'wire' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/my_clk_gen.v:142]
+INFO: [Synth 8-11241] undeclared symbol 'clkout3', assumed default net type 'wire' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/my_clk_gen.v:144]
+WARNING: [Synth 8-6901] identifier 'DATA_BITS' is used before its declaration [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/parallel2serial.v:10]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1115.332 ; gain = 26.535
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1828.781 ; gain = 407.699
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top' [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/top.v:8]
-INFO: [Synth 8-6157] synthesizing module 'my_clk_gen' [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/my_clk_gen.v:73]
-INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [E:/vivado/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39998]
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/top.v:8]
+INFO: [Synth 8-6157] synthesizing module 'my_clk_gen' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/my_clk_gen.v:72]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:79852]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
 	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
-	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: double 
 	Parameter CLKOUT0_DIVIDE_F bound to: 10.000000 - type: double 
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
@@ -48,244 +57,283 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [E:/vivado/Vivado/2020.2/s
 	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
 	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
-	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: double 
-	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: double 
-	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
-	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: double 
-	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
 	Parameter COMPENSATION bound to: ZHOLD - type: string 
 	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
-	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
-	Parameter IS_PSEN_INVERTED bound to: 1'b0 
-	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
-	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
-	Parameter IS_RST_INVERTED bound to: 1'b0 
 	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
-	Parameter REF_JITTER2 bound to: 0.010000 - type: double 
-	Parameter SS_EN bound to: FALSE - type: string 
-	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
-	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (1#1) [E:/vivado/Vivado/2020.2/scripts/rt/data/unisim_comp.v:39998]
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [E:/vivado/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1083]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (2#1) [E:/vivado/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1083]
-INFO: [Synth 8-6155] done synthesizing module 'my_clk_gen' (3#1) [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/my_clk_gen.v:73]
-INFO: [Synth 8-6157] synthesizing module 'btn_scan' [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/btn_scan.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:79852]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'my_clk_gen' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/my_clk_gen.v:72]
+INFO: [Synth 8-6157] synthesizing module 'btn_scan' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/btn_scan.v:8]
 	Parameter CLK_FREQ bound to: 25 - type: integer 
-	Parameter SCAN_INTERVAL bound to: 10 - type: integer 
-	Parameter COUNT_SCAN bound to: 250001 - type: integer 
-	Parameter COUNT_BITS bound to: 18 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'btn_scan' (4#1) [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/btn_scan.v:8]
-INFO: [Synth 8-6157] synthesizing module 'RV32core' [E:/TA/MY/Exp3_NEXYS_A7/code/core/RV32core.v:4]
-INFO: [Synth 8-6157] synthesizing module 'debug_clk' [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/debug_clk.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'debug_clk' (5#1) [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/debug_clk.v:3]
-INFO: [Synth 8-6157] synthesizing module 'REG32' [E:/TA/MY/Exp3_NEXYS_A7/code/common/REG32.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'REG32' (6#1) [E:/TA/MY/Exp3_NEXYS_A7/code/common/REG32.v:23]
-INFO: [Synth 8-6157] synthesizing module 'add_32' [E:/TA/MY/Exp3_NEXYS_A7/code/common/add_32.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'add_32' (7#1) [E:/TA/MY/Exp3_NEXYS_A7/code/common/add_32.v:23]
-INFO: [Synth 8-6157] synthesizing module 'MUX2T1_32' [E:/TA/MY/Exp3_NEXYS_A7/code/common/MUX2T1_32.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'MUX2T1_32' (8#1) [E:/TA/MY/Exp3_NEXYS_A7/code/common/MUX2T1_32.v:23]
-INFO: [Synth 8-6157] synthesizing module 'ROM_D' [E:/TA/MY/Exp3_NEXYS_A7/code/core/ROM_D.v:3]
-INFO: [Synth 8-3876] $readmem data file 'rom.hex' is read successfully [E:/TA/MY/Exp3_NEXYS_A7/code/core/ROM_D.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'ROM_D' (9#1) [E:/TA/MY/Exp3_NEXYS_A7/code/core/ROM_D.v:3]
-INFO: [Synth 8-6157] synthesizing module 'REG_IF_ID' [E:/TA/MY/Exp3_NEXYS_A7/code/core/REG_IF_ID.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'REG_IF_ID' (10#1) [E:/TA/MY/Exp3_NEXYS_A7/code/core/REG_IF_ID.v:22]
-INFO: [Synth 8-6157] synthesizing module 'CtrlUnit' [E:/TA/MY/Exp3_NEXYS_A7/code/core/CtrlUnit.v:4]
-	Parameter Imm_type_I bound to: 3'b001 
-	Parameter Imm_type_B bound to: 3'b010 
-	Parameter Imm_type_J bound to: 3'b011 
-	Parameter Imm_type_S bound to: 3'b100 
-	Parameter Imm_type_U bound to: 3'b101 
-	Parameter cmp_EQ bound to: 3'b001 
-	Parameter cmp_NE bound to: 3'b010 
-	Parameter cmp_LT bound to: 3'b011 
-	Parameter cmp_LTU bound to: 3'b100 
-	Parameter cmp_GE bound to: 3'b101 
-	Parameter cmp_GEU bound to: 3'b110 
-	Parameter ALU_ADD bound to: 4'b0001 
-	Parameter ALU_SUB bound to: 4'b0010 
-	Parameter ALU_AND bound to: 4'b0011 
-	Parameter ALU_OR bound to: 4'b0100 
-	Parameter ALU_XOR bound to: 4'b0101 
-	Parameter ALU_SLL bound to: 4'b0110 
-	Parameter ALU_SRL bound to: 4'b0111 
-	Parameter ALU_SLT bound to: 4'b1000 
-	Parameter ALU_SLTU bound to: 4'b1001 
-	Parameter ALU_SRA bound to: 4'b1010 
-	Parameter ALU_Ap4 bound to: 4'b1011 
-	Parameter ALU_Bout bound to: 4'b1100 
-	Parameter hazard_optype_ALU bound to: 2'b01 
-	Parameter hazard_optype_LOAD bound to: 2'b10 
-	Parameter hazard_optype_STORE bound to: 2'b11 
-INFO: [Synth 8-6155] done synthesizing module 'CtrlUnit' (11#1) [E:/TA/MY/Exp3_NEXYS_A7/code/core/CtrlUnit.v:4]
-INFO: [Synth 8-6157] synthesizing module 'Regs' [E:/TA/MY/Exp3_NEXYS_A7/code/core/Regs.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'Regs' (12#1) [E:/TA/MY/Exp3_NEXYS_A7/code/core/Regs.v:22]
-INFO: [Synth 8-6157] synthesizing module 'ImmGen' [E:/TA/MY/Exp3_NEXYS_A7/code/core/ImmGen.v:3]
-	Parameter Imm_type_I bound to: 3'b001 
-	Parameter Imm_type_B bound to: 3'b010 
-	Parameter Imm_type_J bound to: 3'b011 
-	Parameter Imm_type_S bound to: 3'b100 
-	Parameter Imm_type_U bound to: 3'b101 
-INFO: [Synth 8-6155] done synthesizing module 'ImmGen' (13#1) [E:/TA/MY/Exp3_NEXYS_A7/code/core/ImmGen.v:3]
-INFO: [Synth 8-6157] synthesizing module 'MUX4T1_32' [E:/TA/MY/Exp3_NEXYS_A7/code/common/MUX4T1_32.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'MUX4T1_32' (14#1) [E:/TA/MY/Exp3_NEXYS_A7/code/common/MUX4T1_32.v:23]
-INFO: [Synth 8-6157] synthesizing module 'cmp_32' [E:/TA/MY/Exp3_NEXYS_A7/code/common/cmp_32.v:3]
-	Parameter cmp_EQ bound to: 3'b001 
-	Parameter cmp_NE bound to: 3'b010 
-	Parameter cmp_LT bound to: 3'b011 
-	Parameter cmp_LTU bound to: 3'b100 
-	Parameter cmp_GE bound to: 3'b101 
-	Parameter cmp_GEU bound to: 3'b110 
-INFO: [Synth 8-6155] done synthesizing module 'cmp_32' (15#1) [E:/TA/MY/Exp3_NEXYS_A7/code/common/cmp_32.v:3]
-INFO: [Synth 8-6157] synthesizing module 'HazardDetectionUnit' [E:/TA/MY/Exp3_NEXYS_A7/code/core/HazardDetectionUnit.v:3]
-	Parameter hazard_optype_ALU bound to: 2'b01 
-	Parameter hazard_optype_LOAD bound to: 2'b10 
-	Parameter hazard_optype_STORE bound to: 2'b11 
-INFO: [Synth 8-6155] done synthesizing module 'HazardDetectionUnit' (16#1) [E:/TA/MY/Exp3_NEXYS_A7/code/core/HazardDetectionUnit.v:3]
-INFO: [Synth 8-6157] synthesizing module 'REG_ID_EX' [E:/TA/MY/Exp3_NEXYS_A7/code/core/REG_ID_EX.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'REG_ID_EX' (17#1) [E:/TA/MY/Exp3_NEXYS_A7/code/core/REG_ID_EX.v:22]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [E:/TA/MY/Exp3_NEXYS_A7/code/core/ALU.v:3]
-	Parameter ALU_ADD bound to: 4'b0001 
-	Parameter ALU_SUB bound to: 4'b0010 
-	Parameter ALU_AND bound to: 4'b0011 
-	Parameter ALU_OR bound to: 4'b0100 
-	Parameter ALU_XOR bound to: 4'b0101 
-	Parameter ALU_SLL bound to: 4'b0110 
-	Parameter ALU_SRL bound to: 4'b0111 
-	Parameter ALU_SLT bound to: 4'b1000 
-	Parameter ALU_SLTU bound to: 4'b1001 
-	Parameter ALU_SRA bound to: 4'b1010 
-	Parameter ALU_Ap4 bound to: 4'b1011 
-	Parameter ALU_Bout bound to: 4'b1100 
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (18#1) [E:/TA/MY/Exp3_NEXYS_A7/code/core/ALU.v:3]
-INFO: [Synth 8-6157] synthesizing module 'REG_EX_MEM' [E:/TA/MY/Exp3_NEXYS_A7/code/core/REG_EX_MEM.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'REG_EX_MEM' (19#1) [E:/TA/MY/Exp3_NEXYS_A7/code/core/REG_EX_MEM.v:22]
-INFO: [Synth 8-6157] synthesizing module 'RAM_B' [E:/TA/MY/Exp3_NEXYS_A7/code/core/RAM_B.v:3]
-	Parameter SIZE bound to: 256 - type: integer 
-	Parameter ADDR_LINE bound to: 8 - type: integer 
-	Parameter SIM_UART_ADDR bound to: 268435456 - type: integer 
-INFO: [Synth 8-3876] $readmem data file 'ram.hex' is read successfully [E:/TA/MY/Exp3_NEXYS_A7/code/core/RAM_B.v:20]
-
-Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+INFO: [Synth 8-6155] done synthesizing module 'btn_scan' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/btn_scan.v:8]
+INFO: [Synth 8-6157] synthesizing module 'RV32core' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RV32core.v:4]
+INFO: [Synth 8-6157] synthesizing module 'debug_clk' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_clk.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'debug_clk' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_clk.v:3]
+INFO: [Synth 8-6157] synthesizing module 'REG32' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/common/REG32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'REG32' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/common/REG32.v:23]
+INFO: [Synth 8-6157] synthesizing module 'add_32' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/common/add_32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'add_32' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/common/add_32.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MUX2T1_32' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/common/MUX2T1_32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MUX2T1_32' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/common/MUX2T1_32.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ROM_D' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/ROM_D.v:3]
+INFO: [Synth 8-3876] $readmem data file 'rom.hex' is read successfully [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/ROM_D.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_D' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/ROM_D.v:3]
+INFO: [Synth 8-6157] synthesizing module 'BranchPredictionUnit' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/BranchPredictionUnit.v:3]
+	Parameter TAG_BITS bound to: 24 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'BHT' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/BHT.v:3]
+	Parameter TAG_BITS bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BHT' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/BHT.v:3]
+INFO: [Synth 8-6157] synthesizing module 'BTB' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/BTB.v:3]
+	Parameter TAG_BITS bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BTB' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/BTB.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'BranchPredictionUnit' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/BranchPredictionUnit.v:3]
+INFO: [Synth 8-6157] synthesizing module 'REG_IF_ID' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_IF_ID.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'REG_IF_ID' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_IF_ID.v:22]
+INFO: [Synth 8-6157] synthesizing module 'CtrlUnit' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/CtrlUnit.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'CtrlUnit' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/CtrlUnit.v:4]
+INFO: [Synth 8-6157] synthesizing module 'Regs' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/Regs.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Regs' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/Regs.v:22]
+INFO: [Synth 8-6157] synthesizing module 'ImmGen' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/ImmGen.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ImmGen' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/ImmGen.v:3]
+INFO: [Synth 8-6157] synthesizing module 'MUX4T1_32' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/common/MUX4T1_32.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MUX4T1_32' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/common/MUX4T1_32.v:23]
+INFO: [Synth 8-6157] synthesizing module 'cmp_32' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/common/cmp_32.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'cmp_32' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/common/cmp_32.v:3]
+INFO: [Synth 8-6157] synthesizing module 'HazardDetectionUnit' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/HazardDetectionUnit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'HazardDetectionUnit' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/HazardDetectionUnit.v:3]
+INFO: [Synth 8-6157] synthesizing module 'REG_ID_EX' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_ID_EX.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'REG_ID_EX' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_ID_EX.v:22]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/ALU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/ALU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'REG_EX_MEM' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_EX_MEM.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'REG_EX_MEM' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_EX_MEM.v:22]
+INFO: [Synth 8-6157] synthesizing module 'RAM_B' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RAM_B.v:3]
+INFO: [Synth 8-3876] $readmem data file 'ram.hex' is read successfully [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RAM_B.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'RAM_B' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RAM_B.v:3]
+INFO: [Synth 8-6157] synthesizing module 'REG_MEM_WB' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_MEM_WB.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'REG_MEM_WB' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_MEM_WB.v:21]
+INFO: [Synth 8-6157] synthesizing module 'CPUTEST' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/CPUTEST.v:21]
+INFO: [Synth 8-226] default block is never used [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/CPUTEST.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'CPUTEST' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/CPUTEST.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'RV32core' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RV32core.v:4]
+INFO: [Synth 8-6157] synthesizing module 'display' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/display.v:7]
+INFO: [Synth 8-6157] synthesizing module 'parallel2serial' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/parallel2serial.v:7]
+	Parameter P_CLK_FREQ bound to: 25 - type: integer 
+	Parameter S_CLK_FREQ bound to: 20 - type: integer 
+	Parameter DATA_BITS bound to: 16 - type: integer 
+	Parameter CODE_ENDIAN bound to: 1 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/parallel2serial.v:48]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/parallel2serial.v:99]
+INFO: [Synth 8-6155] done synthesizing module 'parallel2serial' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/parallel2serial.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'display' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/display.v:7]
+INFO: [Synth 8-638] synthesizing module 'UART_TX_CTRL' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/UART_TX_CTRL.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'UART_TX_CTRL' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/UART_TX_CTRL.vhd:50]
+INFO: [Synth 8-6157] synthesizing module 'uart_buffer' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/uart_buffer.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'uart_buffer' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/uart_buffer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'debug_ctrl' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'debug_ctrl' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/top.v:8]
+WARNING: [Synth 8-7137] Register A_EX_reg in module REG_ID_EX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_ID_EX.v:101]
+WARNING: [Synth 8-7137] Register B_EX_reg in module REG_ID_EX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_ID_EX.v:102]
+WARNING: [Synth 8-7137] Register Imm32_EX_reg in module REG_ID_EX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_ID_EX.v:103]
+WARNING: [Synth 8-7137] Register ALUSrc_A_EX_reg in module REG_ID_EX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_ID_EX.v:107]
+WARNING: [Synth 8-7137] Register ALUSrc_B_EX_reg in module REG_ID_EX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_ID_EX.v:108]
+WARNING: [Synth 8-7137] Register ALUC_EX_reg in module REG_ID_EX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_ID_EX.v:109]
+WARNING: [Synth 8-7137] Register DatatoReg_EX_reg in module REG_ID_EX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_ID_EX.v:110]
+WARNING: [Synth 8-7137] Register u_b_h_w_EX_reg in module REG_ID_EX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_ID_EX.v:113]
+WARNING: [Synth 8-7137] Register csr_w_imm_mux_EX_reg in module REG_ID_EX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_ID_EX.v:119]
+WARNING: [Synth 8-7137] Register ALUO_MEM_reg in module REG_EX_MEM has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_EX_MEM.v:92]
+WARNING: [Synth 8-7137] Register Datao_MEM_reg in module REG_EX_MEM has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_EX_MEM.v:93]
+WARNING: [Synth 8-7137] Register DatatoReg_MEM_reg in module REG_EX_MEM has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_EX_MEM.v:94]
+WARNING: [Synth 8-7137] Register rs1_data_MEM_reg in module REG_EX_MEM has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_EX_MEM.v:99]
+WARNING: [Synth 8-7137] Register u_b_h_w_MEM_reg in module REG_EX_MEM has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_EX_MEM.v:100]
+WARNING: [Synth 8-7137] Register csr_w_imm_mux_MEM_reg in module REG_EX_MEM has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_EX_MEM.v:104]
+WARNING: [Synth 8-4767] Trying to implement RAM ' ' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
 	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
 	2: Unable to determine number of words or word size in RAM. 
 	3: No valid read/write found for RAM. 
 RAM dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'data_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
 Reason is one or more of the following :
 	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
 	2: Unable to determine number of words or word size in RAM. 
 	3: No valid read/write found for RAM. 
 RAM "data_reg" dissolved into registers
-INFO: [Synth 8-6155] done synthesizing module 'RAM_B' (20#1) [E:/TA/MY/Exp3_NEXYS_A7/code/core/RAM_B.v:3]
-INFO: [Synth 8-6157] synthesizing module 'REG_MEM_WB' [E:/TA/MY/Exp3_NEXYS_A7/code/core/REG_MEM_WB.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'REG_MEM_WB' (21#1) [E:/TA/MY/Exp3_NEXYS_A7/code/core/REG_MEM_WB.v:21]
-INFO: [Synth 8-6157] synthesizing module 'CPUTEST' [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/CPUTEST.v:21]
-INFO: [Synth 8-226] default block is never used [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/CPUTEST.v:63]
-INFO: [Synth 8-6155] done synthesizing module 'CPUTEST' (22#1) [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/CPUTEST.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'RV32core' (23#1) [E:/TA/MY/Exp3_NEXYS_A7/code/core/RV32core.v:4]
-INFO: [Synth 8-6157] synthesizing module 'display' [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/display.v:7]
-	Parameter CLK_FREQ bound to: 25 - type: integer 
-	Parameter SEG_PULSE bound to: 1'b0 
-	Parameter REFRESH_INTERVAL bound to: 100 - type: integer 
-	Parameter COUNT_REFRESH bound to: 2500001 - type: integer 
-	Parameter COUNT_BITS bound to: 22 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'parallel2serial' [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/parallel2serial.v:7]
-	Parameter P_CLK_FREQ bound to: 25 - type: integer 
-	Parameter S_CLK_FREQ bound to: 20 - type: integer 
-	Parameter DATA_BITS bound to: 16 - type: integer 
-	Parameter CODE_ENDIAN bound to: 1 - type: integer 
-	Parameter COUNT_HALFCYCLE bound to: 1 - type: integer 
-	Parameter CYCLE_COUNT_BITS bound to: 1 - type: integer 
-	Parameter DATA_COUNT_BITS bound to: 4 - type: integer 
-	Parameter S_IDLE bound to: 0 - type: integer 
-	Parameter S_CLEAR bound to: 1 - type: integer 
-	Parameter S_WORK bound to: 2 - type: integer 
-	Parameter S_DONE bound to: 3 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/parallel2serial.v:48]
-INFO: [Synth 8-155] case statement is not full and has no default [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/parallel2serial.v:99]
-INFO: [Synth 8-6155] done synthesizing module 'parallel2serial' (24#1) [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/parallel2serial.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'display' (25#1) [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/display.v:7]
-INFO: [Synth 8-638] synthesizing module 'UART_TX_CTRL' [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/UART_TX_CTRL.vhd:50]
-INFO: [Synth 8-256] done synthesizing module 'UART_TX_CTRL' (26#1) [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/UART_TX_CTRL.vhd:50]
-INFO: [Synth 8-6157] synthesizing module 'uart_buffer' [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/uart_buffer.v:3]
-	Parameter SIZE bound to: 256 - type: integer 
+WARNING: [Synth 8-7137] Register ALUO_WB_reg in module REG_MEM_WB has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_MEM_WB.v:65]
+WARNING: [Synth 8-7137] Register MDR_WB_reg in module REG_MEM_WB has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_MEM_WB.v:66]
+WARNING: [Synth 8-7137] Register DatatoReg_WB_reg in module REG_MEM_WB has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/REG_MEM_WB.v:69]
+WARNING: [Synth 8-3848] Net Addr in module/entity RV32core does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RV32core.v:261]
+WARNING: [Synth 8-3848] Net MWR in module/entity RV32core does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RV32core.v:262]
+WARNING: [Synth 8-3848] Net RegWrite_cancel_exp in module/entity RV32core does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RV32core.v:53]
+WARNING: [Synth 8-3848] Net reg_MW_flush_exp in module/entity RV32core does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RV32core.v:53]
+WARNING: [Synth 8-3848] Net reg_EM_flush_exp in module/entity RV32core does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RV32core.v:53]
+WARNING: [Synth 8-3848] Net reg_DE_flush_exp in module/entity RV32core does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RV32core.v:52]
+WARNING: [Synth 8-3848] Net reg_FD_flush_exp in module/entity RV32core does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RV32core.v:52]
+WARNING: [Synth 8-3848] Net redirect_mux_exp in module/entity RV32core does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RV32core.v:52]
+WARNING: [Synth 8-3848] Net s_access_fault_MEM in module/entity RV32core does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RV32core.v:57]
+WARNING: [Synth 8-3848] Net l_access_fault_MEM in module/entity RV32core does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/core/RV32core.v:57]
+WARNING: [Synth 8-4767] Trying to implement RAM 'buffer_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
 Reason is one or more of the following :
 	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
 	2: Unable to determine number of words or word size in RAM. 
 	3: No valid read/write found for RAM. 
 RAM "buffer_reg" dissolved into registers
-INFO: [Synth 8-6155] done synthesizing module 'uart_buffer' (27#1) [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/uart_buffer.v:3]
-INFO: [Synth 8-6157] synthesizing module 'debug_ctrl' [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:6]
-	Parameter STR_X bound to: x - type: string 
-	Parameter STR_PC bound to: WB_PC   - type: string 
-	Parameter STR_INST bound to: WB_INST - type: string 
-	Parameter STR_CUST0 bound to: CUSTOM0 - type: string 
-	Parameter STR_CUST1 bound to: CUSTOM1 - type: string 
-	Parameter STR_COLON bound to: =0x - type: string 
-	Parameter BEAT_REG bound to: 15 - type: integer 
-	Parameter NUM_REG bound to: 32 - type: integer 
-	Parameter BEAT_CUST bound to: 19 - type: integer 
-	Parameter NUM_CUST_SIG bound to: 4 - type: integer 
-	Parameter CNT_REG bound to: 31 - type: integer 
-	Parameter CNT_CUST bound to: 3 - type: integer 
-	Parameter sIDLE bound to: 2'b00 
-	Parameter sREG bound to: 2'b01 
-	Parameter sCUST bound to: 2'b10 
-INFO: [Synth 8-6155] done synthesizing module 'debug_ctrl' (28#1) [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top' (29#1) [E:/TA/MY/Exp3_NEXYS_A7/code/auxillary/top.v:8]
+WARNING: [Synth 8-3848] Net cust_sig_list[4] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[5] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[6] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[7] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[8] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[9] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[10] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[11] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[12] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[13] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[14] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[15] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[16] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[17] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[18] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[19] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[20] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[21] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[22] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[23] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[24] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[25] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[26] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[27] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[28] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[29] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[30] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_sig_list[31] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:47]
+WARNING: [Synth 8-3848] Net cust_name_list[4] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[5] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[6] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[7] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[8] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[9] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[10] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[11] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[12] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[13] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[14] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[15] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[16] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[17] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[18] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[19] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[20] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[21] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[22] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[23] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[24] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[25] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[26] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[27] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[28] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[29] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[30] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net cust_name_list[31] in module/entity debug_ctrl does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/debug_ctrl.v:55]
+WARNING: [Synth 8-3848] Net VGA_B in module/entity top does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/top.v:26]
+WARNING: [Synth 8-3848] Net VGA_G in module/entity top does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/top.v:27]
+WARNING: [Synth 8-3848] Net VGA_R in module/entity top does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/top.v:28]
+WARNING: [Synth 8-3848] Net HS in module/entity top does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/top.v:29]
+WARNING: [Synth 8-3848] Net VS in module/entity top does not have driver. [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/auxillary/top.v:29]
+WARNING: [Synth 8-7129] Port inst_field[6] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst_field[5] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst_field[4] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst_field[3] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst_field[2] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst_field[1] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst_field[0] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[31] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[30] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[29] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[28] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[27] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[26] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[25] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[24] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[23] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[22] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[21] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[20] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[19] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[18] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[17] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[16] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[15] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[11] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[10] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[9] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[8] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst[7] in module BranchPredictionUnit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port debug_addr[6] in module RV32core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_B[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_B[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_B[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_B[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_G[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_G[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_G[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_G[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_R[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_R[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_R[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_R[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port HS in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VS in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[15] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[14] in module top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1239.152 ; gain = 150.355
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2116.734 ; gain = 695.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1239.152 ; gain = 150.355
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2116.734 ; gain = 695.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1239.152 ; gain = 150.355
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2116.734 ; gain = 695.652
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.200 . Memory (MB): peak = 1239.152 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.380 . Memory (MB): peak = 2116.734 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [E:/TA/MY/Exp3_NEXYS_A7/code/constraint.xdc]
-Finished Parsing XDC File [E:/TA/MY/Exp3_NEXYS_A7/code/constraint.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/TA/MY/Exp3_NEXYS_A7/code/constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Parsing XDC File [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/constraint.xdc]
+Finished Parsing XDC File [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/constraint.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/code/constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1386.500 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2268.547 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1386.500 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.101 . Memory (MB): peak = 2268.547 ; gain = 0.000
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1386.500 ; gain = 297.703
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2268.547 ; gain = 847.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1386.500 ; gain = 297.703
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2268.547 ; gain = 847.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1386.500 ; gain = 297.703
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2268.547 ; gain = 847.465
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'parallel2serial'
 INFO: [Synth 8-802] inferred FSM for state register 'txState_reg' in module 'UART_TX_CTRL'
@@ -316,7 +364,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'txState_reg' using encodin
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'debug_ctrl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1386.500 ; gain = 297.703
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:27 . Memory (MB): peak = 2268.547 ; gain = 847.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -324,7 +372,7 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input   33 Bit       Adders := 1     
-	   2 Input   32 Bit       Adders := 5     
+	   2 Input   32 Bit       Adders := 6     
 	   3 Input   32 Bit       Adders := 1     
 	   2 Input    9 Bit       Adders := 3     
 	   2 Input    7 Bit       Adders := 9     
@@ -337,7 +385,9 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit         XORs := 2     
 +---Registers : 
 	               64 Bit    Registers := 1     
+	               57 Bit    Registers := 256   
 	               32 Bit    Registers := 49    
+	               27 Bit    Registers := 256   
 	               17 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
 	               10 Bit    Registers := 1     
@@ -353,8 +403,10 @@ Detailed RTL Component Info :
 	   4 Input 2048 Bit        Muxes := 1     
 	   3 Input  160 Bit        Muxes := 1     
 	   2 Input   64 Bit        Muxes := 2     
-	   2 Input   32 Bit        Muxes := 17    
+	   2 Input   32 Bit        Muxes := 18    
 	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   27 Bit        Muxes := 3     
+	   4 Input   27 Bit        Muxes := 2     
 	   2 Input   24 Bit        Muxes := 1     
 	   4 Input   17 Bit        Muxes := 1     
 	   2 Input   16 Bit        Muxes := 4     
@@ -365,14 +417,14 @@ Detailed RTL Component Info :
 	   2 Input    7 Bit        Muxes := 17    
 	   2 Input    5 Bit        Muxes := 8     
 	   3 Input    5 Bit        Muxes := 3     
-	   2 Input    4 Bit        Muxes := 6     
+	   2 Input    4 Bit        Muxes := 5     
 	   4 Input    4 Bit        Muxes := 2     
 	  16 Input    4 Bit        Muxes := 8     
 	   6 Input    3 Bit        Muxes := 1     
 	   3 Input    2 Bit        Muxes := 10    
 	   2 Input    2 Bit        Muxes := 8     
 	   4 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 44    
+	   2 Input    1 Bit        Muxes := 556   
 	   4 Input    1 Bit        Muxes := 6     
 	   3 Input    1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
@@ -390,19 +442,47 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port VGA_B[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_B[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_B[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_B[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_G[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_G[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_G[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_G[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_R[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_R[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_R[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VGA_R[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port HS in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VS in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[15] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[14] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst_field[6] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst_field[5] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst_field[4] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst_field[3] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst_field[2] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst_field[1] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inst_field[0] in module ImmGen is either unconnected or has no load
+INFO: [Synth 8-3886] merging instance 'reg_MEM_WB/exp_vector_WB_reg[0]' (FDCE) to 'reg_MEM_WB/exp_vector_WB_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (reg_MEM_WB/\exp_vector_WB_reg[1] )
+INFO: [Synth 8-3886] merging instance 'reg_IF_ID/IR_ID_reg[1]' (FDPE) to 'reg_IF_ID/IR_ID_reg[0]'
+INFO: [Synth 8-3886] merging instance 'reg_ID_EX/IR_EX_reg[0]' (FDCE) to 'reg_ID_EX/IR_EX_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_EXE_MEM/IR_MEM_reg[0]' (FDCE) to 'reg_EXE_MEM/IR_MEM_reg[1]'
+INFO: [Synth 8-3886] merging instance 'reg_MEM_WB/IR_WB_reg[0]' (FDCE) to 'reg_MEM_WB/IR_WB_reg[1]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:25 ; elapsed = 00:01:31 . Memory (MB): peak = 1608.512 ; gain = 519.715
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:01:15 . Memory (MB): peak = 2268.547 ; gain = 847.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
-ROM: Preliminary Mapping	Report
+ROM: Preliminary Mapping Report
 +------------+------------+---------------+----------------+
 |Module Name | RTL Object | Depth x Width | Implemented As | 
 +------------+------------+---------------+----------------+
-|ROM_D       | p_0_out    | 256x31        | LUT            | 
-|ROM_D       | p_0_out    | 256x31        | LUT            | 
+|ROM_D       | inst_data  | 256x31        | LUT            | 
 +------------+------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
@@ -412,19 +492,34 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:31 ; elapsed = 00:01:37 . Memory (MB): peak = 1608.512 ; gain = 519.715
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:01:19 . Memory (MB): peak = 2268.547 ; gain = 847.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:49 ; elapsed = 00:02:56 . Memory (MB): peak = 1971.594 ; gain = 882.797
+Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:02:10 . Memory (MB): peak = 2685.930 ; gain = 1264.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'corei_3/core/reg_ID_EX/IR_EX_reg[7]' (FDCE) to 'corei_3/core/reg_ID_EX/rd_EX_reg[0]'
+INFO: [Synth 8-3886] merging instance 'corei_3/core/reg_ID_EX/IR_EX_reg[8]' (FDCE) to 'corei_3/core/reg_ID_EX/rd_EX_reg[1]'
+INFO: [Synth 8-3886] merging instance 'corei_3/core/reg_ID_EX/IR_EX_reg[9]' (FDCE) to 'corei_3/core/reg_ID_EX/rd_EX_reg[2]'
+INFO: [Synth 8-3886] merging instance 'corei_3/core/reg_ID_EX/IR_EX_reg[10]' (FDCE) to 'corei_3/core/reg_ID_EX/rd_EX_reg[3]'
+INFO: [Synth 8-3886] merging instance 'corei_3/core/reg_ID_EX/IR_EX_reg[11]' (FDCE) to 'corei_3/core/reg_ID_EX/rd_EX_reg[4]'
+INFO: [Synth 8-3886] merging instance 'corei_3/core/reg_EXE_MEM/IR_MEM_reg[7]' (FDCE) to 'corei_3/core/reg_EXE_MEM/rd_MEM_reg[0]'
+INFO: [Synth 8-3886] merging instance 'corei_3/core/reg_EXE_MEM/IR_MEM_reg[8]' (FDCE) to 'corei_3/core/reg_EXE_MEM/rd_MEM_reg[1]'
+INFO: [Synth 8-3886] merging instance 'corei_3/core/reg_EXE_MEM/IR_MEM_reg[9]' (FDCE) to 'corei_3/core/reg_EXE_MEM/rd_MEM_reg[2]'
+INFO: [Synth 8-3886] merging instance 'corei_3/core/reg_EXE_MEM/IR_MEM_reg[10]' (FDCE) to 'corei_3/core/reg_EXE_MEM/rd_MEM_reg[3]'
+INFO: [Synth 8-3886] merging instance 'corei_3/core/reg_EXE_MEM/IR_MEM_reg[11]' (FDCE) to 'corei_3/core/reg_EXE_MEM/rd_MEM_reg[4]'
+INFO: [Synth 8-3886] merging instance 'corei_3/core/reg_MEM_WB/rd_WB_reg[2]' (FDCE) to 'corei_3/core/reg_MEM_WB/IR_WB_reg[9]'
+INFO: [Synth 8-3886] merging instance 'corei_3/core/reg_MEM_WB/rd_WB_reg[1]' (FDCE) to 'corei_3/core/reg_MEM_WB/IR_WB_reg[8]'
+INFO: [Synth 8-3886] merging instance 'corei_3/core/reg_MEM_WB/rd_WB_reg[0]' (FDCE) to 'corei_3/core/reg_MEM_WB/IR_WB_reg[7]'
+INFO: [Synth 8-3886] merging instance 'corei_3/core/reg_MEM_WB/rd_WB_reg[3]' (FDCE) to 'corei_3/core/reg_MEM_WB/IR_WB_reg[10]'
+INFO: [Synth 8-3886] merging instance 'corei_3/core/reg_MEM_WB/rd_WB_reg[4]' (FDCE) to 'corei_3/core/reg_MEM_WB/IR_WB_reg[11]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:01 ; elapsed = 00:03:08 . Memory (MB): peak = 1971.594 ; gain = 882.797
+Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:02:24 . Memory (MB): peak = 2685.930 ; gain = 1264.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -442,37 +537,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:08 ; elapsed = 00:03:15 . Memory (MB): peak = 1971.594 ; gain = 882.797
+Finished IO Insertion : Time (s): cpu = 00:01:04 ; elapsed = 00:02:32 . Memory (MB): peak = 2685.930 ; gain = 1264.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:08 ; elapsed = 00:03:15 . Memory (MB): peak = 1971.594 ; gain = 882.797
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:04 ; elapsed = 00:02:33 . Memory (MB): peak = 2685.930 ; gain = 1264.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:10 ; elapsed = 00:03:17 . Memory (MB): peak = 1971.594 ; gain = 882.797
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:06 ; elapsed = 00:02:37 . Memory (MB): peak = 2685.930 ; gain = 1264.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:10 ; elapsed = 00:03:17 . Memory (MB): peak = 1971.594 ; gain = 882.797
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:06 ; elapsed = 00:02:37 . Memory (MB): peak = 2685.930 ; gain = 1264.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:12 ; elapsed = 00:03:19 . Memory (MB): peak = 1971.594 ; gain = 882.797
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:07 ; elapsed = 00:02:38 . Memory (MB): peak = 2685.930 ; gain = 1264.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:12 ; elapsed = 00:03:19 . Memory (MB): peak = 1971.594 ; gain = 882.797
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:07 ; elapsed = 00:02:38 . Memory (MB): peak = 2685.930 ; gain = 1264.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -489,44 +584,45 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BUFG       |     8|
-|2     |CARRY4     |    82|
-|3     |LUT1       |    25|
-|4     |LUT2       |   377|
-|5     |LUT3       |  1006|
-|6     |LUT4       |   891|
-|7     |LUT5       |  2175|
-|8     |LUT6       | 10329|
+|2     |CARRY4     |    99|
+|3     |LUT1       |    28|
+|4     |LUT2       |   448|
+|5     |LUT3       |   989|
+|6     |LUT4       |   948|
+|7     |LUT5       |  2484|
+|8     |LUT6       | 18169|
 |9     |MMCME2_ADV |     1|
-|10    |MUXF7      |  1815|
-|11    |MUXF8      |   757|
-|12    |FDCE       |  1302|
+|10    |MUXF7      |  5586|
+|11    |MUXF8      |  2621|
+|12    |FDCE       | 23078|
 |13    |FDPE       |     2|
-|14    |FDRE       |  4769|
+|14    |FDRE       |  4772|
 |15    |FDSE       |    23|
 |16    |IBUF       |    18|
 |17    |OBUF       |    33|
 |18    |OBUFT      |    14|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:13 ; elapsed = 00:03:19 . Memory (MB): peak = 1971.594 ; gain = 882.797
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:07 ; elapsed = 00:02:38 . Memory (MB): peak = 2685.930 ; gain = 1264.848
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:02 ; elapsed = 00:03:15 . Memory (MB): peak = 1971.594 ; gain = 735.449
-Synthesis Optimization Complete : Time (s): cpu = 00:03:13 ; elapsed = 00:03:20 . Memory (MB): peak = 1971.594 ; gain = 882.797
+Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:00 ; elapsed = 00:02:33 . Memory (MB): peak = 2685.930 ; gain = 1113.035
+Synthesis Optimization Complete : Time (s): cpu = 00:01:07 ; elapsed = 00:02:39 . Memory (MB): peak = 2685.930 ; gain = 1264.848
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.263 . Memory (MB): peak = 1971.594 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 2655 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.368 . Memory (MB): peak = 2685.930 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8307 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1971.594 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2685.930 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
+Synth Design complete, checksum: 5151cd76
 INFO: [Common 17-83] Releasing license: Synthesis
-87 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+124 Infos, 162 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:22 ; elapsed = 00:03:34 . Memory (MB): peak = 1971.594 ; gain = 882.797
-INFO: [Common 17-1381] The checkpoint 'E:/TA/MY/Exp3_NEXYS_A7/Exp2.runs/synth_1/top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:11 ; elapsed = 00:02:46 . Memory (MB): peak = 2685.930 ; gain = 1684.355
+INFO: [Common 17-1381] The checkpoint 'C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab3/Exp3_NEXYS_A7/Exp3.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Nov  8 19:31:45 2023...
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  4 22:06:47 2023...

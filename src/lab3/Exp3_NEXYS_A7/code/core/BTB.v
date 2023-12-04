@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module BTB
-#(parameter TAG_BITS = 10) (
+#(parameter TAG_BITS = 22) (
     input wire          clk,
     input wire          rst,
     input wire [31:0]   PC,
@@ -15,6 +15,7 @@ module BTB
 );
     localparam TAG_SIZE = 1 << TAG_BITS;
     localparam INDEX_BITS = 32 - TAG_BITS;
+    localparam INDEX_SIZE = 1 << INDEX_BITS;
     localparam BTBE_SIZE = 1 + TAG_BITS + 32;
 
     integer i;
@@ -22,7 +23,7 @@ module BTB
     // set the regs to represent the BTB
     // {valid, tag, target_PC}, valid is 1 bit, tag is TAG_BITS bits, target_PC is 32 bits
     // which uses the direct mapping method like cache
-    reg [BTBE_SIZE-1:0] BTB [0:TAG_SIZE-1];
+    reg [BTBE_SIZE-1:0] BTB [0:INDEX_SIZE-1];
 
     // PREDICT PART
     // get the index of the PC
@@ -32,9 +33,9 @@ module BTB
 
     // get the BTBE of the index got from the PC
     wire [BTBE_SIZE-1:0] BTBE = BTB[index];                 // BTBE_SIZE bits
-    wire BTBE_valid = BTBE[0];                              // 1 bit
-    wire [TAG_BITS-1:0] BTBE_tag = BTBE[1+TAG_BITS-1:1];    // TAG_BITS bits
-    wire [31:0] BTBE_target_PC = BTBE[BTBE_SIZE-1:2];       // 32 bits
+    wire BTBE_valid = BTBE[BTBE_SIZE-1];                    // 1 bit
+    wire [TAG_BITS-1:0] BTBE_tag = BTBE[BTBE_SIZE-2:32];    // TAG_BITS bits
+    wire [31:0] BTBE_target_PC = BTBE[31:0];                // 32 bits
 
     // get the is_predict_found and predict_PC
     assign is_predict_found = BTBE_valid && (BTBE_tag == tag);
@@ -48,14 +49,14 @@ module BTB
 
     // get the BTBE of the index got from the PC
     wire [BTBE_SIZE-1:0] update_BTBE = BTB[update_index];                 // BTBE_SIZE bits
-    wire update_BTBE_valid = update_BTBE[0];                              // 1 bit
-    wire [TAG_BITS-1:0] update_BTBE_tag = update_BTBE[1+TAG_BITS-1:1];    // TAG_BITS bits
-    wire [31:0] update_BTBE_target_PC = update_BTBE[BTBE_SIZE-1:2];       // 32 bits
+    wire update_BTBE_valid = update_BTBE[BTBE_SIZE-1];                    // 1 bit
+    wire [TAG_BITS-1:0] update_BTBE_tag = update_BTBE[BTBE_SIZE-2:32];    // TAG_BITS bits
+    wire [31:0] update_BTBE_target_PC = update_BTBE[31:0];                // 32 bits
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             // initialize the BHT
-            for (i = 0; i < TAG_SIZE; i = i + 1) begin
+            for (i = 0; i < INDEX_SIZE; i = i + 1) begin
                 BTB[i] <= 0;
             end
         end else begin

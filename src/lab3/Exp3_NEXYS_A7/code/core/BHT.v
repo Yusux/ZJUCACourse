@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module BHT
-#(parameter TAG_BITS = 10) (
+#(parameter TAG_BITS = 22) (
     input wire          clk,
     input wire          rst,
     input wire [31:0]   PC,
@@ -15,6 +15,7 @@ module BHT
 );
     localparam TAG_SIZE = 1 << TAG_BITS;
     localparam INDEX_BITS = 32 - TAG_BITS;
+    localparam INDEX_SIZE = 1 << INDEX_BITS;
     localparam BHTE_SIZE = 1 + TAG_BITS + 2;
 
     integer i;
@@ -22,19 +23,19 @@ module BHT
     // set the regs to represent the BHT
     // {valid, tag, is_taken}, valid is 1 bit, tag is TAG_BITS bits, is_taken is 2 bits
     // which uses the direct mapping method like cache
-    reg [BHTE_SIZE-1:0] BHT [0:TAG_SIZE-1];
+    reg [BHTE_SIZE-1:0] BHT [0:INDEX_SIZE-1];
 
     // PREDICT PART
     // get the index of the PC
     wire [INDEX_BITS-1:0] index = PC[INDEX_BITS-1:0];       // 32 - TAG_BITS bits
     // get the tag of the PC
-    wire [TAG_BITS-1:0] tag = PC[31:31-TAG_BITS+1];         // TAG_BITS bits
+    wire [TAG_BITS-1:0] tag = PC[31:32-TAG_BITS];           // TAG_BITS bits
 
     // get the BHTE of the index got from the PC
     wire [BHTE_SIZE-1:0] BHTE = BHT[index];                 // BHTE_SIZE bits
-    wire BHTE_valid = BHTE[0];                              // 1 bit
-    wire [TAG_BITS-1:0] BHTE_tag = BHTE[1+TAG_BITS-1:1];    // TAG_BITS bits
-    wire [1:0] BHTE_is_taken = BHTE[BHTE_SIZE-1:2];         // 2 bits
+    wire BHTE_valid = BHTE[BHTE_SIZE-1];                    // 1 bit
+    wire [TAG_BITS-1:0] BHTE_tag = BHTE[BHTE_SIZE-2:2];     // TAG_BITS bits
+    wire [1:0] BHTE_is_taken = BHTE[1:0];                   // 2 bits
 
     // get the is_predict_found and is_predict_taken
     assign is_predict_found = BHTE_valid && (BHTE_tag == tag);
@@ -42,20 +43,20 @@ module BHT
 
     // UPDATE PART
     // get the index of the PC
-    wire [INDEX_BITS-1:0] update_index = source_PC[INDEX_BITS-1:0];       // 32 - TAG_BITS bits
+    wire [INDEX_BITS-1:0] update_index = source_PC[INDEX_BITS-1:0];     // 32 - TAG_BITS bits
     // get the tag of the PC
-    wire [TAG_BITS-1:0] update_tag = source_PC[31:31-TAG_BITS+1];         // TAG_BITS bits
+    wire [TAG_BITS-1:0] update_tag = source_PC[31:32-TAG_BITS];         // TAG_BITS bits
 
     // get the BHTE of the index got from the PC
-    wire [BHTE_SIZE-1:0] update_BHTE = BHT[update_index];                 // BHTE_SIZE bits
-    wire update_BHTE_valid = update_BHTE[0];                              // 1 bit
-    wire [TAG_BITS-1:0] update_BHTE_tag = update_BHTE[1+TAG_BITS-1:1];    // TAG_BITS bits
-    wire [1:0] update_BHTE_is_taken = update_BHTE[BHTE_SIZE-1:2];         // 2 bits
+    wire [BHTE_SIZE-1:0] update_BHTE = BHT[update_index];               // BHTE_SIZE bits
+    wire update_BHTE_valid = update_BHTE[BHTE_SIZE-1];                  // 1 bit
+    wire [TAG_BITS-1:0] update_BHTE_tag = update_BHTE[BHTE_SIZE-2:2];   // TAG_BITS bits
+    wire [1:0] update_BHTE_is_taken = update_BHTE[1:0];                 // 2 bits
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             // initialize the BHT
-            for (i = 0; i < TAG_SIZE; i = i + 1) begin
+            for (i = 0; i < INDEX_SIZE; i = i + 1) begin
                 BHT[i] <= 0;
             end
         end else begin

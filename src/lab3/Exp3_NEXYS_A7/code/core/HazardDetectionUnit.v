@@ -2,7 +2,7 @@
 
 module HazardDetectionUnit(
     input clk,
-    input Branch_ID, rs1use_ID, rs2use_ID,
+    input branch_predict_error_IF, rs1use_ID, rs2use_ID,
     input[1:0] hazard_optype_ID,
     input[4:0] rd_EXE, rd_MEM, rs1_ID, rs2_ID, rs2_EXE,
     output PC_EN_IF, reg_FD_stall, reg_FD_flush, reg_DE_flush,
@@ -21,8 +21,7 @@ module HazardDetectionUnit(
     localparam hazard_optype_STORE = 2'd3;
 
     wire rs1_forward_1     = rs1use_ID && rs1_ID == rd_EXE && rd_EXE && hazard_optype_EXE == hazard_optype_ALU;
-    wire rs1_forward_stall = rs1use_ID && rs1_ID == rd_EXE && rd_EXE && hazard_optype_EXE == hazard_optype_LOAD
-                             && hazard_optype_ID != hazard_optype_STORE;
+    wire rs1_forward_stall = rs1use_ID && rs1_ID == rd_EXE && rd_EXE && hazard_optype_EXE == hazard_optype_LOAD;
     wire rs1_forward_2     = rs1use_ID && rs1_ID == rd_MEM && rd_MEM && hazard_optype_MEM == hazard_optype_ALU;
     wire rs1_forward_3     = rs1use_ID && rs1_ID == rd_MEM && rd_MEM && hazard_optype_MEM == hazard_optype_LOAD;
 
@@ -36,7 +35,7 @@ module HazardDetectionUnit(
 
     assign PC_EN_IF = ~load_stall;
     assign reg_FD_stall = load_stall;
-    assign reg_FD_flush = Branch_ID;
+    assign reg_FD_flush = branch_predict_error_IF;
     assign reg_DE_flush = load_stall;
 
     assign forward_ctrl_A = rs1_forward_1 ?  2'd1 : rs1_forward_2 ?  2'd2 : rs1_forward_3 ?  2'd3 : 2'b0 ;

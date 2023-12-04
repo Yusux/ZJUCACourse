@@ -32,12 +32,12 @@ module  RV32core(
     wire forward_ctrl_ls;
     wire[1:0] forward_ctrl_A, forward_ctrl_B;
 
-	wire PC_EN_IF;
-	wire [31:0] PC_IF, next_PC_IF, PC_4_IF, inst_IF, final_PC_IF;
+	wire PC_EN_IF, branch_predict_is_taken_IF, branch_predict_error_IF;
+	wire [31:0] PC_IF, PC_4_IF, inst_IF, branch_predict_PC_IF, predicted_PC_IF, PC_next_IF;
 
     wire reg_FD_stall, reg_FD_flush, isFlushed_ID, cmp_res_ID;
-    wire [31:0] jump_PC_ID, PC_ID, inst_ID, Debug_regs, rs1_data_reg, rs2_data_reg,
-        Imm_out_ID, rs1_data_ID, rs2_data_ID, addA_ID;
+    wire [31:0] jump_PC_ID, branch_next_PC_ID, PC_ID, inst_ID, Debug_regs, rs1_data_reg, rs2_data_reg,
+        Imm_out_ID, rs1_data_ID, rs2_data_ID, addA_ID, PC_4_ID;
     
     wire reg_DE_flush, isFlushed_EXE, RegWrite_EXE, mem_w_EXE, mem_r_EXE,
         ALUSrc_A_EXE, ALUSrc_B_EXE, ALUzero_EXE, ALUoverflow_EXE, DatatoReg_EXE,
@@ -69,13 +69,30 @@ module  RV32core(
 
 
     // IF
-    REG32 REG_PC(.clk(debug_clk),.rst(rst),.CE(PC_EN_IF),.D(next_PC_IF),.Q(PC_IF));
+    REG32 REG_PC(.clk(debug_clk),.rst(rst),.CE(PC_EN_IF),.D(PC_next_IF),.Q(PC_IF));
     
     add_32 add_IF(.a(PC_IF),.b(32'd4),.c(PC_4_IF));
 
-    MUX2T1_32 mux_IF(.I0(PC_4_IF),.I1(jump_PC_ID),.s(Branch_ctrl),.o(next_PC_IF));        
+    MUX2T1_32 mux_branch_predict_IF(.I0(PC_4_IF),.I1(branch_predict_PC_IF),.s(branch_predict_is_taken_IF),.o(predicted_PC_IF));
+
+    MUX2T1_32 mux_PC_IF(.I0(predicted_PC_IF),.I1(branch_next_PC_ID),.s(branch_predict_error_IF),.o(PC_next_IF));
 
     ROM_D inst_rom(.a(PC_IF[9:2]),.spo(inst_IF));
+
+    BranchPredictionUnit branch_predict_unit(
+        .clk(debug_clk),
+        .rst(rst),
+        .PC(PC_IF),
+        .inst(inst_IF),
+        .update(branch_predict_error_IF),
+        .source_PC(PC_ID),
+        .is_taken(Branch_ctrl),
+        .target_PC(jump_PC_ID),
+        .is_predict_taken(branch_predict_is_taken_IF),
+        .predict_PC(branch_predict_PC_IF)
+    );
+
+    assign branch_predict_error_IF = (~isFlushed_ID) && (PC_IF != branch_next_PC_ID);
 
 
     // ID
@@ -111,12 +128,16 @@ module  RV32core(
 
     cmp_32 cmp_ID(.a(rs1_data_ID),.b(rs2_data_ID),.ctrl(cmp_ctrl),.c(cmp_res_ID));
     
-    HazardDetectionUnit hazard_unit(.clk(debug_clk),.Branch_ID(Branch_ctrl),.rs1use_ID(rs1use_ctrl),
-        .rs2use_ID(rs2use_ctrl),.hazard_optype_ID(hazard_optype_ctrl),.rd_EXE(rd_EXE),
+    HazardDetectionUnit hazard_unit(.clk(debug_clk),.branch_predict_error_IF(branch_predict_error_IF),
+        .rs1use_ID(rs1use_ctrl),.rs2use_ID(rs2use_ctrl),.hazard_optype_ID(hazard_optype_ctrl),.rd_EXE(rd_EXE),
         .rd_MEM(rd_MEM),.rs1_ID(inst_ID[19:15]),.rs2_ID(inst_ID[24:20]),.rs2_EXE(rs2_EXE),
         .PC_EN_IF(PC_EN_IF),.reg_FD_stall(reg_FD_stall),.reg_FD_flush(reg_FD_flush),
         .reg_DE_flush(reg_DE_flush),.forward_ctrl_ls(forward_ctrl_ls),.forward_ctrl_A(forward_ctrl_A),
         .forward_ctrl_B(forward_ctrl_B));
+
+    add_32 add_PC4_ID(.a(PC_ID),.b(32'd4),.c(PC_4_ID));
+
+    MUX2T1_32 mux_branch_IF(.I0(PC_4_ID),.I1(jump_PC_ID),.s(Branch_ctrl),.o(branch_next_PC_ID));
 
 
     // EX
@@ -215,7 +236,7 @@ module  RV32core(
                     .PC_EXE(PC_EXE),
                     .PC_MEM(PC_MEM),
                     .PC_WB(PC_WB),
-                    .PC_next_IF(next_PC_IF),
+                    .PC_next_IF(PC_next_IF),
                     .PCJump(jump_PC_ID),
                     .inst_IF(inst_IF),
                     .inst_ID(inst_ID),

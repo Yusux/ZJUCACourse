@@ -2,12 +2,12 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Nov  8 10:30:16 2023
-# Process ID: 25668
-# Current directory: E:/TA/MY/Exp3_NEXYS_A7/Exp2.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source E:/TA/MY/Exp3_NEXYS_A7/Exp2.sim/sim_1/behav/xsim/xsim.dir/core_sim_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: E:/TA/MY/Exp3_NEXYS_A7/Exp2.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: E:/TA/MY/Exp3_NEXYS_A7/Exp2.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Thu Nov 16 14:06:44 2023
+# Process ID: 21288
+# Current directory: E:/TA/arch-fa23_/src/lab3/Exp3_NEXYS_A7/Exp2.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source E:/TA/arch-fa23_/src/lab3/Exp3_NEXYS_A7/Exp2.sim/sim_1/behav/xsim/xsim.dir/core_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: E:/TA/arch-fa23_/src/lab3/Exp3_NEXYS_A7/Exp2.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: E:/TA/arch-fa23_/src/lab3/Exp3_NEXYS_A7/Exp2.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source E:/TA/MY/Exp3_NEXYS_A7/Exp2.sim/sim_1/behav/xsim/xsim.dir/core_sim_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Wed Nov  8 10:30:16 2023...
+source E:/TA/arch-fa23_/src/lab3/Exp3_NEXYS_A7/Exp2.sim/sim_1/behav/xsim/xsim.dir/core_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Nov 16 14:06:45 2023...

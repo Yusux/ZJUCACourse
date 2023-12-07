@@ -3,23 +3,28 @@
     with args -log ROM_D.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ROM_D.tcl
 
 
-****** Vivado v2018.2 (64-bit)
-  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
-  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source ROM_D.tcl -notrace
-Command: synth_design -top ROM_D -part xc7k325tffg676-2L -mode out_of_context
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ROM_D
+Command: synth_design -top ROM_D -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
 Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
-INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10944 
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1732
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 445.000 ; gain = 95.578
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1837.941 ; gain = 406.855
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'ROM_D' [c:/Users/Zonghui Wang/Desktop/risc v/Code4Teach/Exp4/Exp4.srcs/sources_1/ip/ROM_D/synth/ROM_D.vhd:66]
-	Parameter C_FAMILY bound to: kintex7 - type: string 
+INFO: [Synth 8-638] synthesizing module 'ROM_D' [c:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab4/Exp4_NEXYS_A7/Exp4.gen/sources_1/ip/ROM_D/synth/ROM_D.vhd:66]
+	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_ADDR_WIDTH bound to: 10 - type: integer 
 	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
 	Parameter C_DEPTH bound to: 1024 - type: integer 
@@ -51,169 +56,159 @@ INFO: [Synth 8-638] synthesizing module 'ROM_D' [c:/Users/Zonghui Wang/Desktop/r
 	Parameter C_SYNC_ENABLE bound to: 1 - type: integer 
 	Parameter C_WIDTH bound to: 32 - type: integer 
 	Parameter C_PARSER_TYPE bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_12' declared at 'c:/Users/Zonghui Wang/Desktop/risc v/Code4Teach/Exp4/Exp4.srcs/sources_1/ip/ROM_D/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_12' [c:/Users/Zonghui Wang/Desktop/risc v/Code4Teach/Exp4/Exp4.srcs/sources_1/ip/ROM_D/synth/ROM_D.vhd:132]
-INFO: [Synth 8-256] done synthesizing module 'ROM_D' (4#1) [c:/Users/Zonghui Wang/Desktop/risc v/Code4Teach/Exp4/Exp4.srcs/sources_1/ip/ROM_D/synth/ROM_D.vhd:66]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[31]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[30]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[29]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[28]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[27]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[26]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[25]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[24]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[23]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[22]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[21]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[20]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[19]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[18]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[17]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[16]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[15]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[14]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[13]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[12]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[11]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[10]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[9]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[8]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[7]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[6]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[5]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[4]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[3]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[2]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[1]
-WARNING: [Synth 8-3331] design rom has unconnected port qspo[0]
-WARNING: [Synth 8-3331] design rom has unconnected port clk
-WARNING: [Synth 8-3331] design rom has unconnected port qspo_ce
-WARNING: [Synth 8-3331] design rom has unconnected port qspo_rst
-WARNING: [Synth 8-3331] design rom has unconnected port qspo_srst
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[31]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[30]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[29]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[28]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[27]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[26]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[25]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[24]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[23]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[22]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[21]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[20]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[19]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[18]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[17]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[16]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[15]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[14]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[13]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[12]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[11]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[10]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[9]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[8]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[7]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[6]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[5]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[4]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[3]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[2]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[1]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port dpo[0]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[31]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[30]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[29]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[28]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[27]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[26]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[25]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[24]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[23]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[22]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[21]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[20]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[19]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[18]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[17]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[16]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[15]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[14]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[13]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[12]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[11]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[10]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[9]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[8]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[7]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[6]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[5]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[4]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[3]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[2]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[1]
-WARNING: [Synth 8-3331] design dist_mem_gen_v8_0_12_synth has unconnected port qdpo[0]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3491] module 'dist_mem_gen_v8_0_13' declared at 'c:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab4/Exp4_NEXYS_A7/Exp4.gen/sources_1/ip/ROM_D/hdl/dist_mem_gen_v8_0_vhsyn_rfs.vhd:3237' bound to instance 'U0' of component 'dist_mem_gen_v8_0_13' [c:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab4/Exp4_NEXYS_A7/Exp4.gen/sources_1/ip/ROM_D/synth/ROM_D.vhd:132]
+INFO: [Synth 8-256] done synthesizing module 'ROM_D' (0#1) [c:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab4/Exp4_NEXYS_A7/Exp4.gen/sources_1/ip/ROM_D/synth/ROM_D.vhd:66]
+WARNING: [Synth 8-7129] Port qspo[31] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[30] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[29] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[28] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[27] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[26] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[25] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[24] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[23] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[22] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[21] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[20] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[19] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[18] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[17] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[16] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[15] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[14] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[13] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[12] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[11] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[10] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[9] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[8] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[7] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[6] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[5] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[4] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[3] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[2] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[1] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo[0] in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo_ce in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo_rst in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qspo_srst in module rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[31] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[30] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[29] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[28] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[27] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[26] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[25] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[24] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[23] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[22] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[21] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[20] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[19] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[18] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[17] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[16] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[15] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[14] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[13] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[12] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[11] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[10] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[9] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[8] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[7] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[6] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[5] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[4] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[3] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[2] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[1] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dpo[0] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[31] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[30] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[29] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[28] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[27] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[26] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[25] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[24] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[23] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[22] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[21] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[20] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[19] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[18] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[17] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[16] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[15] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[14] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[13] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[12] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[11] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[10] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[9] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[8] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[7] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[6] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[5] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[4] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[3] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[2] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[1] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port qdpo[0] in module dist_mem_gen_v8_0_13_synth is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 508.270 ; gain = 158.848
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1938.793 ; gain = 507.707
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 508.270 ; gain = 158.848
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1938.793 ; gain = 507.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 508.270 ; gain = 158.848
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1938.793 ; gain = 507.707
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7k325tffg676-2L
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1938.793 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/Zonghui Wang/Desktop/risc v/Code4Teach/Exp4/Exp4.srcs/sources_1/ip/ROM_D/ROM_D_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/Users/Zonghui Wang/Desktop/risc v/Code4Teach/Exp4/Exp4.srcs/sources_1/ip/ROM_D/ROM_D_ooc.xdc] for cell 'U0'
-Parsing XDC File [C:/Users/Zonghui Wang/Desktop/risc v/Code4Teach/Exp4/Exp4.runs/ROM_D_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/Zonghui Wang/Desktop/risc v/Code4Teach/Exp4/Exp4.runs/ROM_D_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab4/Exp4_NEXYS_A7/Exp4.gen/sources_1/ip/ROM_D/ROM_D_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab4/Exp4_NEXYS_A7/Exp4.gen/sources_1/ip/ROM_D/ROM_D_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab4/Exp4_NEXYS_A7/Exp4.runs/ROM_D_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab4/Exp4_NEXYS_A7/Exp4.runs/ROM_D_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1940.355 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 808.707 ; gain = 1.324
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1940.746 ; gain = 0.391
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 808.707 ; gain = 459.285
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1940.746 ; gain = 509.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
-Loading part: xc7k325tffg676-2L
+Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 808.707 ; gain = 459.285
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1940.746 ; gain = 509.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  {C:/Users/Zonghui Wang/Desktop/risc v/Code4Teach/Exp4/Exp4.runs/ROM_D_synth_1/dont_touch.xdc}, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab4/Exp4_NEXYS_A7/Exp4.runs/ROM_D_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 808.707 ; gain = 459.285
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1940.746 ; gain = 509.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 808.707 ; gain = 459.285
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1940.746 ; gain = 509.660
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -222,79 +217,54 @@ Detailed RTL Component Info :
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start RTL Hierarchical Component Statistics 
----------------------------------------------------------------------------------
-Hierarchical RTL Component report 
----------------------------------------------------------------------------------
-Finished RTL Hierarchical Component Statistics
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
 Start Part Resource Summary
 ---------------------------------------------------------------------------------
 Part Resources:
-DSPs: 840 (col length:140)
-BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 808.707 ; gain = 459.285
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1957.145 ; gain = 526.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
-ROM:
+ROM: Preliminary Mapping Report
 +---------------------+--------------------------------------------------------+---------------+----------------+
 |Module Name          | RTL Object                                             | Depth x Width | Implemented As | 
 +---------------------+--------------------------------------------------------+---------------+----------------+
-|rom                  | rom[1023]                                              | 1024x32       | LUT            | 
-|dist_mem_gen_v8_0_12 | synth_options.dist_mem_inst/gen_rom.rom_inst/rom[1023] | 1024x32       | LUT            | 
+|rom                  | rom[1023]                                              | 1024x23       | LUT            | 
+|dist_mem_gen_v8_0_13 | synth_options.dist_mem_inst/gen_rom.rom_inst/rom[1023] | 1024x23       | LUT            | 
 +---------------------+--------------------------------------------------------+---------------+----------------+
 
 ---------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 866.922 ; gain = 517.500
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1957.145 ; gain = 526.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 866.922 ; gain = 517.500
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1957.145 ; gain = 526.059
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 867.000 ; gain = 517.578
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1957.145 ; gain = 526.059
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -311,50 +281,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 868.125 ; gain = 518.703
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1957.145 ; gain = 526.059
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 868.125 ; gain = 518.703
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1957.145 ; gain = 526.059
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 868.125 ; gain = 518.703
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1957.145 ; gain = 526.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 868.125 ; gain = 518.703
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1957.145 ; gain = 526.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 868.125 ; gain = 518.703
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1957.145 ; gain = 526.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 868.125 ; gain = 518.703
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1957.145 ; gain = 526.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -374,38 +331,28 @@ Report Cell Usage:
 |2     |LUT5 |     5|
 |3     |LUT6 |    17|
 +------+-----+------+
-
-Report Instance Areas: 
-+------+----------------------------------+---------------------------+------+
-|      |Instance                          |Module                     |Cells |
-+------+----------------------------------+---------------------------+------+
-|1     |top                               |                           |    24|
-|2     |  U0                              |dist_mem_gen_v8_0_12       |    24|
-|3     |    \synth_options.dist_mem_inst  |dist_mem_gen_v8_0_12_synth |    24|
-|4     |      \gen_rom.rom_inst           |rom                        |    24|
-+------+----------------------------------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 868.125 ; gain = 518.703
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1957.145 ; gain = 526.059
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 148 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 868.125 ; gain = 218.266
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 868.125 ; gain = 518.703
+Synthesis finished with 0 errors, 0 critical warnings and 149 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1957.145 ; gain = 524.105
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1957.145 ; gain = 526.059
 INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1967.543 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1971.258 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
+Synth Design complete, checksum: 83b885d6
 INFO: [Common 17-83] Releasing license: Synthesis
-13 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+20 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 893.938 ; gain = 555.984
-WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Zonghui Wang/Desktop/risc v/Code4Teach/Exp4/Exp4.runs/ROM_D_synth_1/ROM_D.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/Zonghui Wang/Desktop/risc v/Code4Teach/Exp4/Exp4.srcs/sources_1/ip/ROM_D/ROM_D.xci
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1971.258 ; gain = 934.434
+INFO: [Common 17-1381] The checkpoint 'C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab4/Exp4_NEXYS_A7/Exp4.runs/ROM_D_synth_1/ROM_D.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ROM_D, cache-ID = c858fd4a338c89ba
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
-WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Zonghui Wang/Desktop/risc v/Code4Teach/Exp4/Exp4.runs/ROM_D_synth_1/ROM_D.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab4/Exp4_NEXYS_A7/Exp4.runs/ROM_D_synth_1/ROM_D.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ROM_D_utilization_synth.rpt -pb ROM_D_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.150 . Memory (MB): peak = 895.176 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Sep  5 21:14:46 2021...
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  7 16:31:57 2023...

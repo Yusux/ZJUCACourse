@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2021 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2023 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -45,9 +45,8 @@
 -- PART OF THIS FILE AT ALL TIMES.
 -- 
 -- DO NOT MODIFY THIS FILE.
-
 -- IP VLNV: xilinx.com:ip:dist_mem_gen:8.0
--- IP Revision: 12
+-- IP Revision: 13
 
 -- The following code must appear in the VHDL architecture header.
 
@@ -55,7 +54,7 @@
 COMPONENT ROM_D
   PORT (
     a : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-    spo : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    spo : OUT STD_LOGIC_VECTOR(31 DOWNTO 0) 
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -74,4 +73,6 @@ your_instance_name : ROM_D
 -- You must compile the wrapper file ROM_D.vhd when simulating
 -- the core, ROM_D. When compiling the wrapper file, be sure to
 -- reference the VHDL simulation library.
+
+
 

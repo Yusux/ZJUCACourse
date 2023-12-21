@@ -1,0 +1,40 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/CtrlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CtrlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/FU_ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FU_ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/FU_div.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FU_div
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/FU_jump.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FU_jump
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/FU_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FU_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/FU_mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FU_mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/ImmGen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/common/MUX2T1_32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX2T1_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/RAM_B.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM_B
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/common/REG32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REG32
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/REG_IF_IS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REG_IF_IS
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/ROM_D.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_D
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/RV32core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RV32core
+ERROR: [VRFC 10-4982] syntax error near '<=' [E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/RV32core.v:119]
+ERROR: [VRFC 10-4982] syntax error near ';' [E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/RV32core.v:122]
+ERROR: [VRFC 10-4982] syntax error near 'rs_alu' [E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/RV32core.v:129]
+ERROR: [VRFC 10-4982] syntax error near 'assign' [E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/RV32core.v:301]
+ERROR: [VRFC 10-2790] Verilog 2000 keyword assign used in incorrect context [E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/RV32core.v:301]
+ERROR: [VRFC 10-2969] 'ctrl_stall' is not a type [E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/RV32core.v:119]
+ERROR: [VRFC 10-2969] 'FU_stall' is not a type [E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/RV32core.v:120]
+ERROR: [VRFC 10-2865] module 'RV32core' ignored due to previous errors [E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/core/RV32core.v:3]
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/Exp6.srcs/sources_1/ip/divider/sim/divider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'divider'
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/Exp6.srcs/sources_1/ip/multiplier/sim/multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'multiplier'
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/TA/arch-fall23/src/bonus/Exp6_NEXYS_A7/code/auxillary/UART_TX_CTRL.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'UART_TX_CTRL'

@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="sim_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="sim_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="5462610fs"></ZoomStartTime>
+      <ZoomEndTime time="7369611fs"></ZoomEndTime>
+      <Cursor1Time time="5656610fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="188"></NameColumnWidth>
+      <ValueColumnWidth column_width="77"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="54" />
+   <wvobject fp_name="/sim_top/uut/core/debug_clk" type="logic">
+      <obj_property name="ElementShortName">debug_clk</obj_property>
+      <obj_property name="ObjectShortName">debug_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/PC_IF" type="array">
+      <obj_property name="ElementShortName">PC_IF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_IF[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/inst_IF" type="array">
+      <obj_property name="ElementShortName">inst_IF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_IF[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/PC_IS" type="array">
+      <obj_property name="ElementShortName">PC_IS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_IS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/inst_IS" type="array">
+      <obj_property name="ElementShortName">inst_IS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_IS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/rs1_addr_ctrl" type="array">
+      <obj_property name="ElementShortName">rs1_addr_ctrl[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rs1_addr_ctrl[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/rs1_data_RO" type="array">
+      <obj_property name="ElementShortName">rs1_data_RO[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs1_data_RO[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/rs2_addr_ctrl" type="array">
+      <obj_property name="ElementShortName">rs2_addr_ctrl[4:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2_addr_ctrl[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/rs2_data_RO" type="array">
+      <obj_property name="ElementShortName">rs2_data_RO[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2_data_RO[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/clk_counter" type="array">
+      <obj_property name="ElementShortName">clk_counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_counter[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group3909" type="group">
+      <obj_property name="label">cdb</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/sim_top/uut/core/cdb_data" type="array">
+         <obj_property name="ElementShortName">cdb_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cdb_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/cdb_pc" type="array">
+         <obj_property name="ElementShortName">cdb_pc[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cdb_pc[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/cdb_rs_num" type="array">
+         <obj_property name="ElementShortName">cdb_rs_num[7:0]</obj_property>
+         <obj_property name="ObjectShortName">cdb_rs_num[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/FU_ALU_EN" type="logic">
+      <obj_property name="ElementShortName">FU_ALU_EN</obj_property>
+      <obj_property name="ObjectShortName">FU_ALU_EN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/FU_ALU_finish" type="logic">
+      <obj_property name="ElementShortName">FU_ALU_finish</obj_property>
+      <obj_property name="ObjectShortName">FU_ALU_finish</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/FU_mem_EN" type="logic">
+      <obj_property name="ElementShortName">FU_mem_EN</obj_property>
+      <obj_property name="ObjectShortName">FU_mem_EN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/FU_mem_finish" type="logic">
+      <obj_property name="ElementShortName">FU_mem_finish</obj_property>
+      <obj_property name="ObjectShortName">FU_mem_finish</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/FU_mul_EN" type="logic">
+      <obj_property name="ElementShortName">FU_mul_EN</obj_property>
+      <obj_property name="ObjectShortName">FU_mul_EN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/FU_mul_finish" type="logic">
+      <obj_property name="ElementShortName">FU_mul_finish</obj_property>
+      <obj_property name="ObjectShortName">FU_mul_finish</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/FU_div_EN" type="logic">
+      <obj_property name="ElementShortName">FU_div_EN</obj_property>
+      <obj_property name="ObjectShortName">FU_div_EN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/FU_div_finish" type="logic">
+      <obj_property name="ElementShortName">FU_div_finish</obj_property>
+      <obj_property name="ObjectShortName">FU_div_finish</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/ju/EN" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">EN</obj_property>
+      <obj_property name="ObjectShortName">EN</obj_property>
+      <obj_property name="label">FU_jump_EN</obj_property>
+   </wvobject>
+   <wvobject fp_name="group103" type="group">
+      <obj_property name="label">MEM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/sim_top/uut/core/mem/EN" type="logic">
+         <obj_property name="ElementShortName">EN</obj_property>
+         <obj_property name="ObjectShortName">EN</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/FU_mem_finish" type="logic">
+         <obj_property name="ElementShortName">FU_mem_finish</obj_property>
+         <obj_property name="ObjectShortName">FU_mem_finish</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/mem/mem_w" type="logic">
+         <obj_property name="ElementShortName">mem_w</obj_property>
+         <obj_property name="ObjectShortName">mem_w</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/mem/bhw" type="array">
+         <obj_property name="ElementShortName">bhw[2:0]</obj_property>
+         <obj_property name="ObjectShortName">bhw[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/mem/mem_data" type="array">
+         <obj_property name="ElementShortName">mem_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/mem/imm" type="array">
+         <obj_property name="ElementShortName">imm[31:0]</obj_property>
+         <obj_property name="ObjectShortName">imm[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/FU_mem_EN" type="logic">
+         <obj_property name="ElementShortName">FU_mem_EN</obj_property>
+         <obj_property name="ObjectShortName">FU_mem_EN</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group140" type="group">
+      <obj_property name="label">STALL</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/PC_EN_IF" type="logic">
+      <obj_property name="ElementShortName">PC_EN_IF</obj_property>
+      <obj_property name="ObjectShortName">PC_EN_IF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/ImmSel_ctrl" type="array">
+      <obj_property name="ElementShortName">ImmSel_ctrl[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ImmSel_ctrl[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group104" type="group">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/sim_top/uut/core/FU_ALU_EN" type="logic">
+         <obj_property name="ElementShortName">FU_ALU_EN</obj_property>
+         <obj_property name="ObjectShortName">FU_ALU_EN</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/FU_ALU_finish" type="logic">
+         <obj_property name="ElementShortName">FU_ALU_finish</obj_property>
+         <obj_property name="ObjectShortName">FU_ALU_finish</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/alu/ALUA" type="array">
+         <obj_property name="ElementShortName">ALUA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUA[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/alu/ALUB" type="array">
+         <obj_property name="ElementShortName">ALUB[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUB[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/alu/ALUControl" type="array">
+         <obj_property name="ElementShortName">ALUControl[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUControl[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/alu/res" type="array">
+         <obj_property name="ElementShortName">res[31:0]</obj_property>
+         <obj_property name="ObjectShortName">res[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/alu/ALUB" type="array">
+      <obj_property name="ElementShortName">ALUB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group102" type="group">
+      <obj_property name="label">DIV MUL</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/sim_top/uut/core/mulres_FU" type="array">
+         <obj_property name="ElementShortName">mulres_FU[31:0]</obj_property>
+         <obj_property name="ObjectShortName">mulres_FU[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/divres_FU" type="array">
+         <obj_property name="ElementShortName">divres_FU[31:0]</obj_property>
+         <obj_property name="ObjectShortName">divres_FU[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group101" type="group">
+      <obj_property name="label">JUMP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/sim_top/uut/core/ju/EN" type="logic">
+         <obj_property name="ElementShortName">EN</obj_property>
+         <obj_property name="ObjectShortName">EN</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/ju/finish" type="logic">
+         <obj_property name="ElementShortName">finish</obj_property>
+         <obj_property name="ObjectShortName">finish</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/is_jump_FU" type="logic">
+         <obj_property name="ElementShortName">is_jump_FU</obj_property>
+         <obj_property name="ObjectShortName">is_jump_FU</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/PC_jump_FU" type="array">
+         <obj_property name="ElementShortName">PC_jump_FU[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PC_jump_FU[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/PC_wb_FU" type="array">
+         <obj_property name="ElementShortName">PC_wb_FU[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PC_wb_FU[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/reg_IF_IS/PCOUT" type="array">
+      <obj_property name="ElementShortName">PCOUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PCOUT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/reg_IF_IS/IR" type="array">
+      <obj_property name="ElementShortName">IR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/reg_IF_IS/IR_IS" type="array">
+      <obj_property name="ElementShortName">IR_IS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IR_IS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/reg_IF_IS/PCurrent_IS" type="array">
+      <obj_property name="ElementShortName">PCurrent_IS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PCurrent_IS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/cdb_pc" type="array">
+      <obj_property name="ElementShortName">cdb_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cdb_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/cdb_data" type="array">
+      <obj_property name="ElementShortName">cdb_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cdb_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/IS_EN" type="logic">
+      <obj_property name="ElementShortName">IS_EN</obj_property>
+      <obj_property name="ObjectShortName">IS_EN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/PC_EN_IF" type="logic">
+      <obj_property name="ElementShortName">PC_EN_IF</obj_property>
+      <obj_property name="ObjectShortName">PC_EN_IF</obj_property>
+   </wvobject>
+   <wvobject fp_name="group3973" type="group">
+      <obj_property name="label">regs</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/sim_top/uut/core/register/i" type="array">
+         <obj_property name="ElementShortName">i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">i[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/register/rat" type="array">
+         <obj_property name="ElementShortName">rat[0:31][7:0]</obj_property>
+         <obj_property name="ObjectShortName">rat[0:31][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/register/register" type="array">
+         <obj_property name="ElementShortName">register[1:31][31:0]</obj_property>
+         <obj_property name="ObjectShortName">register[1:31][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/register/cdb_data" type="array">
+         <obj_property name="ElementShortName">cdb_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cdb_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/register/cdb_rs_num" type="array">
+         <obj_property name="ElementShortName">cdb_rs_num[7:0]</obj_property>
+         <obj_property name="ObjectShortName">cdb_rs_num[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/register/rs_num_B" type="array">
+         <obj_property name="ElementShortName">rs_num_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rs_num_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/register/rs_num_A" type="array">
+         <obj_property name="ElementShortName">rs_num_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rs_num_A[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/register/rs_num_rd" type="array">
+         <obj_property name="ElementShortName">rs_num_rd[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rs_num_rd[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/register/R_addr_rd" type="array">
+         <obj_property name="ElementShortName">R_addr_rd[4:0]</obj_property>
+         <obj_property name="ObjectShortName">R_addr_rd[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/register/rs_rd_w_en" type="logic">
+         <obj_property name="ElementShortName">rs_rd_w_en</obj_property>
+         <obj_property name="ObjectShortName">rs_rd_w_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/register/rdata_B" type="array">
+         <obj_property name="ElementShortName">rdata_B[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rdata_B[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/register/rdata_A" type="array">
+         <obj_property name="ElementShortName">rdata_A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rdata_A[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/register/R_addr_B" type="array">
+         <obj_property name="ElementShortName">R_addr_B[4:0]</obj_property>
+         <obj_property name="ObjectShortName">R_addr_B[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/register/R_addr_A" type="array">
+         <obj_property name="ElementShortName">R_addr_A[4:0]</obj_property>
+         <obj_property name="ObjectShortName">R_addr_A[4:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group3618" type="group">
+      <obj_property name="label">RS_ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/sim_top/uut/core/rs_alu/free_rs_" type="array">
+         <obj_property name="ElementShortName">free_rs_[7:0]</obj_property>
+         <obj_property name="ObjectShortName">free_rs_[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_alu/dominant" type="array">
+         <obj_property name="ElementShortName">dominant[7:0]</obj_property>
+         <obj_property name="ObjectShortName">dominant[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_alu/rs" type="array">
+         <obj_property name="ElementShortName">rs[10:0][159:0]</obj_property>
+         <obj_property name="ObjectShortName">rs[10:0][159:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_alu/Vk" type="array">
+         <obj_property name="ElementShortName">Vk[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Vk[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_alu/Vj" type="array">
+         <obj_property name="ElementShortName">Vj[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Vj[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_alu/Qk" type="array">
+         <obj_property name="ElementShortName">Qk[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Qk[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_alu/Qj" type="array">
+         <obj_property name="ElementShortName">Qj[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Qj[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_alu/op" type="array">
+         <obj_property name="ElementShortName">op[4:0]</obj_property>
+         <obj_property name="ObjectShortName">op[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_alu/free_rs" type="array">
+         <obj_property name="ElementShortName">free_rs[7:0]</obj_property>
+         <obj_property name="ObjectShortName">free_rs[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_alu/selected" type="logic">
+         <obj_property name="ElementShortName">selected</obj_property>
+         <obj_property name="ObjectShortName">selected</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_alu/en_FU" type="logic">
+         <obj_property name="ElementShortName">en_FU</obj_property>
+         <obj_property name="ObjectShortName">en_FU</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_alu/vj" type="array">
+         <obj_property name="ElementShortName">vj[31:0]</obj_property>
+         <obj_property name="ObjectShortName">vj[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_alu/vk" type="array">
+         <obj_property name="ElementShortName">vk[31:0]</obj_property>
+         <obj_property name="ObjectShortName">vk[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group3617" type="group">
+      <obj_property name="label">RS_MEM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/rs_run" type="array">
+         <obj_property name="ElementShortName">rs_run[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rs_run[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/dominant" type="array">
+         <obj_property name="ElementShortName">dominant[7:0]</obj_property>
+         <obj_property name="ObjectShortName">dominant[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/free_rs_" type="array">
+         <obj_property name="ElementShortName">free_rs_[7:0]</obj_property>
+         <obj_property name="ObjectShortName">free_rs_[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/rs" type="array">
+         <obj_property name="ElementShortName">rs[10:0][159:0]</obj_property>
+         <obj_property name="ObjectShortName">rs[10:0][159:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/pc_FU" type="array">
+         <obj_property name="ElementShortName">pc_FU[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_FU[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/A_o" type="array">
+         <obj_property name="ElementShortName">A_o[31:0]</obj_property>
+         <obj_property name="ObjectShortName">A_o[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/op_out" type="array">
+         <obj_property name="ElementShortName">op_out[4:0]</obj_property>
+         <obj_property name="ObjectShortName">op_out[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/vk" type="array">
+         <obj_property name="ElementShortName">vk[31:0]</obj_property>
+         <obj_property name="ObjectShortName">vk[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/vj" type="array">
+         <obj_property name="ElementShortName">vj[31:0]</obj_property>
+         <obj_property name="ObjectShortName">vj[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/en_FU" type="logic">
+         <obj_property name="ElementShortName">en_FU</obj_property>
+         <obj_property name="ObjectShortName">en_FU</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/A" type="array">
+         <obj_property name="ElementShortName">A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">A[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/Vk" type="array">
+         <obj_property name="ElementShortName">Vk[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Vk[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/Vj" type="array">
+         <obj_property name="ElementShortName">Vj[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Vj[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/Qk" type="array">
+         <obj_property name="ElementShortName">Qk[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Qk[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/Qj" type="array">
+         <obj_property name="ElementShortName">Qj[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Qj[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/op" type="array">
+         <obj_property name="ElementShortName">op[4:0]</obj_property>
+         <obj_property name="ObjectShortName">op[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/free_rs" type="array">
+         <obj_property name="ElementShortName">free_rs[7:0]</obj_property>
+         <obj_property name="ObjectShortName">free_rs[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_mem/selected" type="logic">
+         <obj_property name="ElementShortName">selected</obj_property>
+         <obj_property name="ObjectShortName">selected</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group7265" type="group">
+      <obj_property name="label">RS_JUMP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/sim_top/uut/core/rs_jump/vj" type="array">
+         <obj_property name="ElementShortName">vj[31:0]</obj_property>
+         <obj_property name="ObjectShortName">vj[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_jump/vk" type="array">
+         <obj_property name="ElementShortName">vk[31:0]</obj_property>
+         <obj_property name="ObjectShortName">vk[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_jump/Qj" type="array">
+         <obj_property name="ElementShortName">Qj[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Qj[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_jump/Qk" type="array">
+         <obj_property name="ElementShortName">Qk[7:0]</obj_property>
+         <obj_property name="ObjectShortName">Qk[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_jump/Vj" type="array">
+         <obj_property name="ElementShortName">Vj[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Vj[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_jump/Vk" type="array">
+         <obj_property name="ElementShortName">Vk[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Vk[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_jump/dominant" type="array">
+         <obj_property name="ElementShortName">dominant[7:0]</obj_property>
+         <obj_property name="ObjectShortName">dominant[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_jump/free_rs" type="array">
+         <obj_property name="ElementShortName">free_rs[7:0]</obj_property>
+         <obj_property name="ObjectShortName">free_rs[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_jump/op_out" type="array">
+         <obj_property name="ElementShortName">op_out[4:0]</obj_property>
+         <obj_property name="ObjectShortName">op_out[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/fu_stall" type="logic">
+         <obj_property name="ElementShortName">fu_stall</obj_property>
+         <obj_property name="ObjectShortName">fu_stall</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/ctrl_stall" type="logic">
+         <obj_property name="ElementShortName">ctrl_stall</obj_property>
+         <obj_property name="ObjectShortName">ctrl_stall</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_jump/rs" type="array">
+         <obj_property name="ElementShortName">rs[10:0][159:0]</obj_property>
+         <obj_property name="ObjectShortName">rs[10:0][159:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/sim_top/uut/core/rs_jump/selected" type="logic">
+         <obj_property name="ElementShortName">selected</obj_property>
+         <obj_property name="ObjectShortName">selected</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/MUL_use" type="logic">
+      <obj_property name="ElementShortName">MUL_use</obj_property>
+      <obj_property name="ObjectShortName">MUL_use</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/MEM_use" type="logic">
+      <obj_property name="ElementShortName">MEM_use</obj_property>
+      <obj_property name="ObjectShortName">MEM_use</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/JUMP_use" type="logic">
+      <obj_property name="ElementShortName">JUMP_use</obj_property>
+      <obj_property name="ObjectShortName">JUMP_use</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/DIV_use" type="logic">
+      <obj_property name="ElementShortName">DIV_use</obj_property>
+      <obj_property name="ObjectShortName">DIV_use</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/ALU_use" type="logic">
+      <obj_property name="ElementShortName">ALU_use</obj_property>
+      <obj_property name="ObjectShortName">ALU_use</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/MUL_pc" type="array">
+      <obj_property name="ElementShortName">MUL_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MUL_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/MEM_pc" type="array">
+      <obj_property name="ElementShortName">MEM_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/JUMP_pc" type="array">
+      <obj_property name="ElementShortName">JUMP_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">JUMP_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/DIV_pc" type="array">
+      <obj_property name="ElementShortName">DIV_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DIV_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/ALU_pc" type="array">
+      <obj_property name="ElementShortName">ALU_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/rs_num_rd_MEM" type="array">
+      <obj_property name="ElementShortName">rs_num_rd_MEM[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rs_num_rd_MEM[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/done_record" type="array">
+      <obj_property name="ElementShortName">done_record[5:1]</obj_property>
+      <obj_property name="ObjectShortName">done_record[5:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_top/uut/core/ctrl_stall" type="logic">
+      <obj_property name="ElementShortName">ctrl_stall</obj_property>
+      <obj_property name="ObjectShortName">ctrl_stall</obj_property>
+   </wvobject>
+</wave_config>

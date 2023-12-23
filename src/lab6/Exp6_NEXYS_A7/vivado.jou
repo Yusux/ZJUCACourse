@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Dec 21 13:28:06 2023
+# Process ID: 24160
+# Current directory: E:/TA/arch-fall23/src/lab6/Exp6_NEXYS_A7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18096 E:\TA\arch-fall23\src\lab6\Exp6_NEXYS_A7\Exp6.xpr
+# Log file: E:/TA/arch-fall23/src/lab6/Exp6_NEXYS_A7/vivado.log
+# Journal file: E:/TA/arch-fall23/src/lab6/Exp6_NEXYS_A7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/TA/arch-fall23/src/lab6/Exp6_NEXYS_A7/Exp6.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

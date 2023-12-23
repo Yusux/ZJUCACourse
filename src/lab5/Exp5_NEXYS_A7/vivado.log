@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Dec 20 13:42:23 2023
+# Process ID: 26088
+# Current directory: E:/TA/arch-fall23/src/lab5/Exp5_NEXYS_A7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20132 E:\TA\arch-fall23\src\lab5\Exp5_NEXYS_A7\Exp6.xpr
+# Log file: E:/TA/arch-fall23/src/lab5/Exp5_NEXYS_A7/vivado.log
+# Journal file: E:/TA/arch-fall23/src/lab5/Exp5_NEXYS_A7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/TA/arch-fall23/src/lab5/Exp5_NEXYS_A7/Exp6.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/vivado/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 1110.793 ; gain = 0.000
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 20 13:42:51 2023...

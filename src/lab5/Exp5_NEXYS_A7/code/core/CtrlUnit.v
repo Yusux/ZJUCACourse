@@ -274,7 +274,8 @@ module CtrlUnit(
     // *_WAR should be driven high when the FU is allowed to write,
     // which means no WAR hazard.
     // i.e. there is no WAR or when WAR clears
-    // All FUs except self, if src == dst and is not ready, then WAR
+    // All FUs except self, if src == dst and is ready(reserved to read),
+    // then WAR hazard occurs, and *_WAR should be low.
     wire ALU_WAR = (
         (FUS[`FU_MEM][`SRC1_H:`SRC1_L]  != FUS[`FU_ALU][`DST_H:`DST_L] | ~FUS[`FU_MEM][`RDY1])  &
         (FUS[`FU_MEM][`SRC2_H:`SRC2_L]  != FUS[`FU_ALU][`DST_H:`DST_L] | ~FUS[`FU_MEM][`RDY2])  &

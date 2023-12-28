@@ -82,8 +82,8 @@
 `define JUMP_BEQ    5'b0_001_0
 `define JUMP_BNE    5'b0_010_0
 `define JUMP_BLT    5'b0_011_0
-`define JUMP_BGE    5'b0_100_0
-`define JUMP_BLTU   5'b0_101_0
+`define JUMP_BGE    5'b0_101_0
+`define JUMP_BLTU   5'b0_100_0
 `define JUMP_BGEU   5'b0_110_0
 // is jalr; 000;  1 stands for unconditional jump
 `define JUMP_JAL    5'b0_000_1

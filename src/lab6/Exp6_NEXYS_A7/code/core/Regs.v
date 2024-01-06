@@ -56,23 +56,31 @@ integer i;
 	assign rdata_B = (R_addr_B == 0)? 0 : register[R_addr_B];    // read
 	
 	
-	 assign rs_num_A =  
-	 assign rs_num_B =  
+	assign rs_num_A = rat[R_addr_A];
+	assign rs_num_B = rat[R_addr_B];
 	
 	
-	always @(negedge clk or posedge rst) 
+	always @(posedge clk or posedge rst) 
       begin
 		if (rst) 	 begin 			// reset
 		    for (i=1; i<32; i=i+1) begin
 		      register[i] <= 0;	
-		      rat[i]<=0;
+		      rat[i] <= 0;
 		    end
-		    rat[0]<=0;
+		    rat[0] <= 0;
 		end 
-		else begin		          
-		          
-//		     if ((Wt_addr != 0) && (L_S == 1)) 	// write
-//		     register[Wt_addr] <= Wt_data;
+		else begin
+			if (rs_rd_w_en && R_addr_rd != 0 && rs_num_rd != 0) begin
+				rat[R_addr_rd] <= rs_num_rd;
+			end
+			if (cdb_rs_num != 0) begin
+				for (i=1; i<32; i=i+1) begin
+					if (rat[i] == cdb_rs_num) begin
+						register[i] <= cdb_data;
+						rat[i] <= 0;
+					end
+				end
+			end
 		end
 	end
     	

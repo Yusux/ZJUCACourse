@@ -17,8 +17,8 @@ module RAM_B(
     reg[7:0] data[0:SIZE-1];
 
     initial	begin
-        // $readmemh("ram_lab3.mem", data);
-        $readmemh("ram.mem", data);
+        $readmemh("ram_lab3.mem", data);
+        // $readmemh("ram.mem", data);
     end
 
     always @ (negedge clka) begin

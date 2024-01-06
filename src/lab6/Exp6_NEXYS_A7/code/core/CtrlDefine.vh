@@ -30,8 +30,6 @@
 `define PC_L    128 // for JUMP FU calculation, also for debug
 `define PC_H    159
 
-// 00000260 00000094 00008fd0 00000009 [00] 00 00 15
-
 `define MAXLEN 10
 
 // op in FUS

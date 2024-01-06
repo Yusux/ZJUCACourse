@@ -113,16 +113,6 @@ module RS
 					ready_index <= 0;
 				end
 			end
-			// if ready_index is 0, find a ready RS entry
-			if (ready_index == 0) begin
-				for (i = 1; i <= num; i = i + 1) begin : find_ready
-					if (rs[i][`BUSY] == 1 && rs[i][`Q1_H:`Q1_L] == 0 && rs[i][`Q2_H:`Q2_L] == 0) begin
-						ready_index <= i;
-						// en_FU_reg <= 1;
-						disable find_ready;
-					end
-				end
-			end
 			// else begin
 			// 	en_FU_reg <= 0;
 			// end
@@ -143,7 +133,7 @@ module RS
 					rs[free_index_reg][`V1_H:`V1_L] <= cdb_data;
 				end
 				else begin
-					if (Qj == 0 || Qj == free_rs) begin
+					if (Qj == 0) begin
 						rs[free_index_reg][`Q1_H:`Q1_L] <= 0;
 						rs[free_index_reg][`V1_H:`V1_L] <= Vj;
 					end else begin
@@ -158,7 +148,7 @@ module RS
 					rs[free_index_reg][`V2_H:`V2_L] <= cdb_data;
 				end
 				else begin
-					if (Qk == 0 || Qj == free_rs) begin
+					if (Qk == 0) begin
 						rs[free_index_reg][`Q2_H:`Q2_L] <= 0;
 						rs[free_index_reg][`V2_H:`V2_L] <= Vk;
 					end else begin
@@ -169,6 +159,25 @@ module RS
 
 				rs[free_index_reg][`A_H:`A_L] <= A;
 				rs[free_index_reg][`PC_H:`PC_L] <= pc_IS;
+			end
+			// if ready_index is 0, find a ready RS entry
+			if (ready_index == 0) begin
+				for (i = 1; i <= num; i = i + 1) begin : find_ready
+					if (i != free_index_reg) begin
+						if (rs[i][`BUSY] == 1 && rs[i][`Q1_H:`Q1_L] == 0 && rs[i][`Q2_H:`Q2_L] == 0) begin
+							ready_index <= i;
+							// en_FU_reg <= 1;
+							disable find_ready;
+						end
+					end
+					else if (i == free_index_reg) begin
+						if (rs[i][`BUSY] == 1 && Qj == 0 && Qk == 0) begin
+							ready_index <= i;
+							// en_FU_reg <= 1;
+							disable find_ready;
+						end
+					end
+				end
 			end
 			// find next free RS entry
 			free_index_reg <= 0;

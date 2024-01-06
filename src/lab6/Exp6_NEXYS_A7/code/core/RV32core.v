@@ -137,7 +137,7 @@ module  RV32core(
     Regs register(.clk(debug_clk),.rst(rst),
     
        // for tomasulo IS
-	   .rs_rd_w_en(rs_rd_w_en), // does this instr need to write reg? If so, we need to update RAT
+	   .rs_rd_w_en(rs_rd_w_en & ~ctrl_stall & ~IS_flush), // does this instr need to write reg? If so, we need to update RAT
 	   .R_addr_rd(rd_ctrl),    // target reg
 	   .rs_num_rd(rs_num_rd),  // free RS entry, RAT[target reg] = free RS entry
 	   .rs_num_A(rs_num_A),    // Qj

@@ -27,7 +27,8 @@ module top (
     output wire [3:0]VGA_G,
     output wire [3:0]VGA_R,
     output wire HS, VS,
-    output wire UART_TXD
+    output wire UART_TXD,
+    output wire [31:0] debug_WB_PC
     );
     
     // clock generator
@@ -109,6 +110,8 @@ module top (
     assign debug_addr = debug_by_uart? {2'b00, uart_debug_reg} : SW[7:1];
 
     wire [31:0]clk_counter;
+
+    assign debug_WB_PC = wb_addr;
     
     RV32core core(
         .debug_en(SW[0]),

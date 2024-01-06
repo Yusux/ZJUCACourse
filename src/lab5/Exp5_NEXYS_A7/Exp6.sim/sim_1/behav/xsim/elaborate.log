@@ -4,6 +4,7 @@ Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 7 differs from formal bit length 9 for port 'a' [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab5/Exp5_NEXYS_A7/code/core/RV32core.v:53]
 WARNING: [VRFC 10-5021] port 'BTN_C' is not connected on this instance [C:/Users/flyme/Documents/Course/Vivado/Arch/arch-fa23/src/lab5/Exp5_NEXYS_A7/code/sim/sim_top.v:7]
 Completed static elaboration
 Starting simulation data flow analysis
@@ -46,7 +47,7 @@ Compiling module xil_defaultlib.ImmGen
 Compiling module xil_defaultlib.CtrlUnit
 Compiling module xil_defaultlib.Regs
 Compiling module xil_defaultlib.FU_ALU
-Compiling module xil_defaultlib.RAM_B
+Compiling module xil_defaultlib.RAM_B_default
 Compiling module xil_defaultlib.FU_mem
 Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="1000")(0,3)\]
 Compiling architecture mult_and_v of entity unisim.MULT_AND [mult_and_default]

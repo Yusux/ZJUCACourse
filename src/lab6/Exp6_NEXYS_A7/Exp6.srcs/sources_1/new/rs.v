@@ -64,15 +64,19 @@ module RS
     
 	integer i;
 
+	localparam NUM_BITS = $clog2(num);
+
     reg [159:0] rs[1:num]; // 160 bits per entry, totally num entries
+	// use NUM_BITS bits (one more bit than num) to avoid
+	// in case `1 2 3`, 3 first out and 2 second out, then 1 -> 3
+	reg [NUM_BITS:0] rs_order[1:num]; // order of each entry
+	reg [NUM_BITS:0] entries; // how many entries in this RS
 	reg [4:0] free_index_reg; // 0 means no available entry; 
 						   	  // 7:5 ==> indicate which FU this RS manage; 4:0 ==> inner RS index
 	reg [4:0] ready_index; // 0 means no ready entry; 
 						   // 4:0 ==> inner RS index
-	// reg en_FU_reg;
 
 	assign free_rs = free_index_reg == 0 ? 0 : {FU, free_index_reg};
-	// assign en_FU = en_FU_reg;
 	assign en_FU = ready_index == 0 ? 0 : 1;
 	assign vj = ready_index == 0 ? 0 : rs[ready_index][`V1_H:`V1_L];
 	assign vk = ready_index == 0 ? 0 : rs[ready_index][`V2_H:`V2_L];
@@ -86,10 +90,11 @@ module RS
 		if (rst) begin
 			for (i = 1; i <= num; i = i + 1) begin
 				rs[i] <= 0;
+				rs_order[i] <= 0;
 			end
+			entries <= 0;
 			free_index_reg <= 1;
 			ready_index <= 0;
-			// en_FU_reg <= 0;
 		end
 		else begin
 			// update the rs according to cdb
@@ -97,30 +102,31 @@ module RS
 				for (i = 1; i <= num; i = i + 1) begin
 					// if cdb_rs_num equals to Qj, replace the old value
 					if (rs[i][`BUSY] == 1 && rs[i][`Q1_H:`Q1_L] == cdb_rs_num) begin
-						rs[i][`Q1_H:`Q1_L] <= 0;
-						rs[i][`V1_H:`V1_L] <= cdb_data;
+						rs[i][`Q1_H:`Q1_L] = 0;
+						rs[i][`V1_H:`V1_L] = cdb_data;
 					end
 					// if cdb_rs_num equals to Qk, replace the old value
 					if (rs[i][`BUSY] == 1 && rs[i][`Q2_H:`Q2_L] == cdb_rs_num) begin
-						rs[i][`Q2_H:`Q2_L] <= 0;
-						rs[i][`V2_H:`V2_L] <= cdb_data;
+						rs[i][`Q2_H:`Q2_L] = 0;
+						rs[i][`V2_H:`V2_L] = cdb_data;
 					end
 				end
 				// if cdb_rs_num equals to rs_num, clear the entry
 				if (cdb_rs_num[7:5] == FU) begin
 					rs[cdb_rs_num[4:0]][`BUSY] = 0;
-					rs[cdb_rs_num[4:0]] <= 0;
-					ready_index <= 0;
+					rs[cdb_rs_num[4:0]] = 0;
+					rs_order[cdb_rs_num[4:0]] = 0;
+					entries = entries - 1;
+					ready_index = 0;
+					// decrement the rs_order
+					for (i = 1; i <= num; i = i + 1) begin
+						if (i != cdb_rs_num[4:0] && rs[i][`BUSY] == 1) begin
+							rs_order[i] = rs_order[i] - 1;
+						end
+					end
 				end
 			end
-			// else begin
-			// 	en_FU_reg <= 0;
-			// end
-// 00000000000000000000000000000100 00000000000000000000000000000100 00000000000000000000000000000000 00000000000000000000000000000000 [00000000] 00000000 00000000 [00] 00100 1
-// 00000000000000000000000000001000 00000000000000000000000000001000 00000000000000000000000000000000 00000000000000000000000000000000 [00000000] 00000000 00000000 [00] 00100 1
-// addi x1, x1, -1
-// 00000000000000000000000000010000 00000000000000000000000000000000 11111111111111111111111111111111 00000000000000000000000000000000 [00000000] 00000000 00100010 [00] 10001 1
-// 00000000000000000000000000010000 00000000000000000000000000000000 11111111111111111111111111111111 00000000000000000000000000000000 [00000000] 00000000 00100010 [00] 100011
+
 			// if selected is 1, dispatch an instr to RS
 			if (selected && free_index_reg != 0) begin
 				// if selected, find a free RS entry
@@ -159,26 +165,36 @@ module RS
 
 				rs[free_index_reg][`A_H:`A_L] <= A;
 				rs[free_index_reg][`PC_H:`PC_L] <= pc_IS;
+
+				// set the rs_order
+				entries = entries + 1;
+				rs_order[free_index_reg] = entries;
 			end
+
 			// if ready_index is 0, find a ready RS entry
 			if (ready_index == 0) begin
 				for (i = 1; i <= num; i = i + 1) begin : find_ready
 					if (i != free_index_reg) begin
 						if (rs[i][`BUSY] == 1 && rs[i][`Q1_H:`Q1_L] == 0 && rs[i][`Q2_H:`Q2_L] == 0) begin
-							ready_index <= i;
-							// en_FU_reg <= 1;
+							// compare as signed number
+							if (ready_index == 0 || $signed(rs_order[i]) < $signed(rs_order[ready_index])) begin
+								ready_index = i;
+							end
 							disable find_ready;
 						end
 					end
 					else if (i == free_index_reg) begin
 						if (rs[i][`BUSY] == 1 && Qj == 0 && Qk == 0) begin
-							ready_index <= i;
-							// en_FU_reg <= 1;
+							// compare as signed number
+							if (ready_index == 0 || $signed(rs_order[i]) < $signed(rs_order[ready_index])) begin
+								ready_index = i;
+							end
 							disable find_ready;
 						end
 					end
 				end
 			end
+
 			// find next free RS entry
 			free_index_reg <= 0;
 			for (i = 1; i <= num; i = i + 1) begin

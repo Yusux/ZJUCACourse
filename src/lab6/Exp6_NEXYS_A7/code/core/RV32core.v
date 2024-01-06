@@ -419,13 +419,17 @@ module  RV32core(
             // choose one to broadcast
             if (done_record[1]) begin
                 done_record[1] <= 0;
-            end else if (done_record[2]) begin
+            end
+            else if (done_record[2]) begin
                 done_record[2] <= 0;
-            end else if (done_record[3]) begin
+            end
+            else if (done_record[3]) begin
                 done_record[3] <= 0;
-            end else if (done_record[4]) begin
+            end
+            else if (done_record[4]) begin
                 done_record[4] <= 0;
-            end else if (done_record[5]) begin
+            end
+            else if (done_record[5]) begin
                 done_record[5] <= 0;
             end
         end
